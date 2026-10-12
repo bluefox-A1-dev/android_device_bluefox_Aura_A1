@@ -65,6 +65,8 @@ AB_OTA_PARTITIONS += boot init_boot dtbo vendor_boot vbmeta vbmeta_system vbmeta
 
 # Boot/init_boot/vendor_boot v4, with the stock 4K GKI payload.
 BOARD_BOOT_HEADER_VERSION := 4
+BOARD_INIT_BOOT_HEADER_VERSION := 4
+BOARD_INIT_BOOT_IMAGE_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x00000000

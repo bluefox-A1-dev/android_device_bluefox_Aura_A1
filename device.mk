@@ -11,6 +11,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_PACKAGES += fastbootd
 
+# Virtual A/B with compressed userspace snapshots, as on stock.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+PRODUCT_VIRTUAL_AB_COMPRESSION := true
+PRODUCT_PACKAGES += update_engine update_engine_sideload update_verifier
+PRODUCT_PACKAGES_DEBUG += update_engine_client
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 

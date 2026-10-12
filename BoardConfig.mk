@@ -58,5 +58,10 @@ TARGET_COPY_OUT_ODM_DLKM := odm_dlkm
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Virtual A/B OTA partitions (including generic ramdisk and GKI modules).
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += boot init_boot dtbo vendor_boot vbmeta vbmeta_system vbmeta_vendor \
+    system product system_ext system_dlkm vendor vendor_dlkm odm_dlkm
+
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

@@ -6,6 +6,11 @@
 # Preserve the heap tuning in the prebuilt stock vendor properties.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_PACKAGES += fastbootd
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 

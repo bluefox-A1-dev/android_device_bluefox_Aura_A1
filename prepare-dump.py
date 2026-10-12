@@ -7,6 +7,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import shutil
 import sys
 
 
@@ -54,7 +55,9 @@ def main():
     (out / 'prebuilt/ramdisk/modules').symlink_to(modules, target_is_directory=True)
     # Keep original partitions available for later file-level extraction.
     for name in ('vendor', 'system', 'system_ext', 'product', 'system_dlkm', 'vendor_dlkm', 'odm_dlkm'):
-        (out / name).symlink_to(source / name, target_is_directory=True)
+        # extract-utils normalizes system-as-root by moving directories.
+        # Give it independent directories, never symlinks into the source dump.
+        shutil.copytree(source / name, out / name, symlinks=True)
     (out / 'source-SHA256.json').write_text(json.dumps(manifest, indent=2) + '\n')
     print(f'Prepared source: {out}')
 

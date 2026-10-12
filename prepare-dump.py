@@ -10,6 +10,8 @@ import subprocess
 import shutil
 import sys
 
+from extract.ramdisk import pack_first_stage
+
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
@@ -49,6 +51,10 @@ def main():
         dst.symlink_to(src)
         with src.open('rb') as f:
             manifest[f'prebuilt/{destination}'] = hashlib.file_digest(f, 'sha256').hexdigest()
+    first_stage = out / 'prebuilt/ramdisk/first-stage.lz4'
+    pack_first_stage(source / 'vendor_boot/vendor_ramdisk00-root', first_stage)
+    with first_stage.open('rb') as f:
+        manifest['prebuilt/ramdisk/first-stage.lz4'] = hashlib.file_digest(f, 'sha256').hexdigest()
     modules = source / 'vendor_boot/vendor_ramdisk00-root/lib/modules'
     if len(list(modules.glob('*.ko'))) != 174:
         p.error('Unexpected vendor ramdisk module set; update the matched release and file list first')

@@ -191,3 +191,6 @@ prebuilt/ramdisk/modules/ufs-mediatek-dbg.ko;EXTRACT_ONLY|21426cc68228fe5dc8e540
 prebuilt/ramdisk/modules/ufs-mediatek-mod.ko;EXTRACT_ONLY|f8a0c71719331492a89dbdbec8ca9cb89c2e45ad
 prebuilt/ramdisk/modules/upm6920-charger.ko;EXTRACT_ONLY|032634318076511f6c2d4892f03a686a24b07205
 prebuilt/ramdisk/modules/usb_meta.ko;EXTRACT_ONLY|89c436c3cce545c564935e80e9c58fcc1a017268
+
+# First-stage-only archive, derived without changing any signed module
+prebuilt/ramdisk/first-stage.lz4;EXTRACT_ONLY|a1e159f642717163799ffceae5ee078e329a6db7

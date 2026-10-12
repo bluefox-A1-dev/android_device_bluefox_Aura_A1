@@ -1,0 +1,1 @@
+require board=Aura_A1|k6789v1_64

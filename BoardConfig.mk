@@ -126,5 +126,8 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 4
 BOOT_SECURITY_PATCH := 2026-08-05
 VENDOR_SECURITY_PATCH := 2026-08-05
 
+# Vendor manifest stays in the stock vendor image; acknowledge vendor extensions.
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

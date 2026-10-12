@@ -1,0 +1,146 @@
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.netdagent</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.gnss</name>
+        <version>3</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.microtrust.hardware.thh</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.lbs</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.gnss.batching</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkpower_applist</name>
+        <version>3</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.tms.tmsnfc_aidl</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkpower</name>
+        <version>3</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.microtrust.hardware.widevine</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.aee</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.apmonitor</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.atci</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.audio</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.atms</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.composer_ext</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.dmc</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.log</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mdmonitor</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mmagent</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mms</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.data</name>
+        <version>3</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.dch</name>
+        <version>2</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.ims</name>
+        <version>3</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.messaging</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.modem</name>
+        <version>5</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.network</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.ntn</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.rcs</name>
+        <version>2</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.sim</name>
+        <version>2</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex.voice</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.nvram</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.nwk_opt_new</name>
+        <version>1</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.pq_aidl</name>
+        <version>7</version>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.mediatek.hardware.videotelephony</name>
+        <version>1</version>
+    </hal>
+</compatibility-matrix>

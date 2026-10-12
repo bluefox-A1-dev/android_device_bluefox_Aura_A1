@@ -17,6 +17,9 @@ PRODUCT_VIRTUAL_AB_COMPRESSION := true
 PRODUCT_PACKAGES += update_engine update_engine_sideload update_verifier
 PRODUCT_PACKAGES_DEBUG += update_engine_client
 
+# The generic ramdisk lives in init_boot, separate from the GKI boot image.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 

@@ -11,4 +11,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xelex/Q25/Q25-vendor.mk)
+$(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

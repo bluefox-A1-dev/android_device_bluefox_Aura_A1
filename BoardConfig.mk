@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xelex/Q25
+DEVICE_PATH := device/bluefox/Aura_A1
 
 # Inherit the proprietary files
-include vendor/xelex/Q25/BoardConfigVendor.mk
+include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

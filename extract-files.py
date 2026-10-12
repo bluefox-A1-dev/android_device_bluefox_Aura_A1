@@ -17,7 +17,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xelex/Q25',
+    'device/bluefox/Aura_A1',
 ]
 
 
@@ -35,8 +35,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'Q25',
-    'xelex',
+    'Aura_A1',
+    'bluefox',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

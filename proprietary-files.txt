@@ -1,0 +1,6 @@
+# Stock BLUEFOX_J583_A8_Aura_A1_CN_V1.0.3_20260930
+# Matched partition images; extracted only, never installed as vendor files.
+prebuilt/vendor.img;EXTRACT_ONLY|c7c603013366af3bb417e20cf366dd19f7b80a57
+prebuilt/vendor_dlkm.img;EXTRACT_ONLY|2c16b572103185e0ed7164f8059d0d09b6923a4b
+prebuilt/system_dlkm.img;EXTRACT_ONLY|c3350ec760501111e4af627cd43fbbc18d15fdab
+prebuilt/odm_dlkm.img;EXTRACT_ONLY|b6f07f3c5f7fd876930a23543b57697e5b62b32d

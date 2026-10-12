@@ -91,5 +91,20 @@ BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
 BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
 BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
 
+# The PLATFORM fragment preserves first-stage modules, fstab and dep metadata.
+BOARD_VENDOR_RAMDISK_FRAGMENTS := platform
+BOARD_VENDOR_RAMDISK_FRAGMENT.platform.PREBUILT := vendor/bluefox/Aura_A1/proprietary/prebuilt/ramdisk/platform.lz4
+BOARD_VENDOR_RAMDISK_FRAGMENT.platform.MKBOOTIMG_ARGS := --ramdisk_type PLATFORM
+
+# Recovery resources are built into a separate vendor_boot fragment.
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6789
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+BOARD_RECOVERY_KERNEL_MODULES := $(wildcard vendor/bluefox/Aura_A1/proprietary/prebuilt/ramdisk/modules/*.ko)
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.recovery))
+BOARD_DO_NOT_STRIP_RECOVERY_MODULES := true
+
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

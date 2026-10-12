@@ -20,6 +20,11 @@ PRODUCT_PACKAGES_DEBUG += update_engine_client
 # The generic ramdisk lives in init_boot, separate from the GKI boot image.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# Recovery/fastbootd uses the generic recovery boot HAL, not a second Android HAL.
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.default_recovery \
+    init.recovery.mt6789.rc
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 

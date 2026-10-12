@@ -208,7 +208,8 @@ def main():
                 dest.mkdir()
                 payload = subprocess.check_output(['lz4', '-dc', str(archive)])
                 unpack_cpio(payload, dest)
-    # DTBO total_size excludes padding and AVB; preserve stock partition separately.
+    # DT table total_size excludes the MTK certificate trailer as well as AVB.
+    # Strip only AVB, preserving the complete original payload recorded in its footer.
     dtbo_image = source / 'dtbo.img'
     if not dtbo_image.is_file():
         dtbo_image = source / f'dtbo_{args.slot}.img'
@@ -216,7 +217,12 @@ def main():
     magic, total = struct.unpack_from('>II', dtbo)
     if magic != 0xd7b7ab1e or total > len(dtbo):
         raise ValueError('Invalid DTBO image')
-    (out / 'dtbo.img').write_bytes(dtbo[:total])
+    payload_size = total
+    if dtbo[-64:-60] == b'AVBf':
+        _, major, _, payload_size, vbmeta_offset, _, _ = struct.unpack('>4sIIQQQ28s', dtbo[-64:])
+        if major != 1 or not total <= payload_size <= vbmeta_offset < len(dtbo) - 64:
+            raise ValueError('Invalid DTBO AVB footer bounds')
+    (out / 'dtbo.img').write_bytes(dtbo[:payload_size])
     (out / 'extraction-status.json').write_text(json.dumps(dict(complete=not failures, issues=failures), indent=2) + '\n')
     print(f'Extraction finished: {out}; complete={not failures}', flush=True)
     for issue in failures:

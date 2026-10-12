@@ -8,7 +8,7 @@ prebuilt/odm_dlkm.img;EXTRACT_ONLY|b6f07f3c5f7fd876930a23543b57697e5b62b32d
 # Stock GKI and device trees
 prebuilt/kernel/Image.lz4;EXTRACT_ONLY|d226032f4d29bfed517931ebdcaf0a3708126fb5
 prebuilt/kernel/dtb.img:prebuilt/kernel/dtb/mt6789.dtb;EXTRACT_ONLY|e5f241ca3440c6481608bfd4b50e14e56debf07a
-prebuilt/kernel/dtbo.img;EXTRACT_ONLY|b0845d48c71e2c52f0b373540a411a76d0586927
+prebuilt/kernel/dtbo.img;EXTRACT_ONLY|021c41816d403b2fa833264cae106d5341d1f88a
 
 # Stock platform ramdisk, including first-stage modules and load metadata
 prebuilt/ramdisk/platform.lz4;EXTRACT_ONLY|b45fc0abddfbafeb45454ffbcbd5feafd6364fff

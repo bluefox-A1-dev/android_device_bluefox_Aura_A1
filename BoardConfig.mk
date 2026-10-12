@@ -91,10 +91,11 @@ BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
 BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
 BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
 
-# The PLATFORM fragment preserves first-stage modules, fstab and dep metadata.
-BOARD_VENDOR_RAMDISK_FRAGMENTS := platform
-BOARD_VENDOR_RAMDISK_FRAGMENT.platform.PREBUILT := vendor/bluefox/Aura_A1/proprietary/prebuilt/ramdisk/platform.lz4
-BOARD_VENDOR_RAMDISK_FRAGMENT.platform.MKBOOTIMG_ARGS := --ramdisk_type PLATFORM
+# Keep PLATFORM type, using the single fragment name supported by fsgen.
+# The stock archive preserves first-stage modules, fstab and dependency metadata.
+BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
+BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.PREBUILT := vendor/bluefox/Aura_A1/proprietary/prebuilt/ramdisk/platform.lz4
+BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.MKBOOTIMG_ARGS := --ramdisk_type PLATFORM
 
 # Recovery resources are built into a separate vendor_boot fragment.
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true

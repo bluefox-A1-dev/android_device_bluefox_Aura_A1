@@ -1,0 +1,6 @@
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+runtime_resource_overlay {
+    name: "FrameworksResOverlayAuraA1",
+    product_specific: true,
+}

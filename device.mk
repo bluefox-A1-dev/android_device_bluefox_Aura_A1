@@ -25,6 +25,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.default_recovery \
     init.recovery.mt6789.rc
 
+# Preserve the stock phone UI flags; display/brightness overlays stay in vendor.
+PRODUCT_PACKAGES += FrameworksResOverlayAuraA1
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 

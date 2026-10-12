@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <!-- Stock product overlay disables the intrusive notification LED. -->
+    <bool name="config_intrusiveNotificationLed">false</bool>
+    <!-- This phone uses on-screen navigation, with no Q25 keyboard overlay. -->
+    <bool name="config_showNavigationBar">true</bool>
+</resources>

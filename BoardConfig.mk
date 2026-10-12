@@ -106,5 +106,25 @@ BOARD_RECOVERY_KERNEL_MODULES := $(wildcard vendor/bluefox/Aura_A1/proprietary/p
 BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.recovery))
 BOARD_DO_NOT_STRIP_RECOVERY_MODULES := true
 
+# Verified boot: developer images for the already-unlocked bootloader.
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+BOARD_AVB_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_BOOT_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_BOOT_ROLLBACK_INDEX := 0
+BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
+BOARD_AVB_VBMETA_SYSTEM := system system_ext product system_dlkm
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 0
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
+BOARD_AVB_VBMETA_VENDOR := vendor vendor_dlkm odm_dlkm
+BOARD_AVB_VBMETA_VENDOR_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 0
+BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 4
+BOOT_SECURITY_PATCH := 2026-08-05
+VENDOR_SECURITY_PATCH := 2026-08-05
+
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

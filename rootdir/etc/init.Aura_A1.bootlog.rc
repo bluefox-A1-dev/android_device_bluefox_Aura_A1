@@ -9,11 +9,22 @@ service aura-bootlog /vendor/bin/aura_bootlog
     disabled
     oneshot
 
+# Keep logd messages available even when /data and compressed APEX activation fail.
+# This uses the platform's existing logpersist domain and bounded rotation.
+service aura-logcat /system/bin/logcat -b all -v threadtime -v monotonic -f /metadata/aura-bootlogs/logcat.log -r 512 -n 1
+    class core
+    user root
+    group root log
+    seclabel u:r:logpersist:s0
+    disabled
+
 # Metadata is already mounted by first-stage init. Never mount or format it here.
 on post-fs
     mkdir /metadata/aura-bootlogs 0700 root root
     restorecon_recursive /metadata/aura-bootlogs
+    start aura-logcat
     start aura-bootlog
 
 on property:sys.boot_completed=1
     stop aura-bootlog
+    stop aura-logcat

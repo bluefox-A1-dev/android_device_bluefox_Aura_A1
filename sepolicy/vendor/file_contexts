@@ -1,6 +1,7 @@
 # Aura A1 Android 16 HAL names not covered by the common MTK policy.
 /vendor/bin/aura_bootlog u:object_r:aura_bootlog_exec:s0
 /metadata/aura-bootlogs(/.*)? u:object_r:aura_bootlog_file:s0
+/metadata/aura-bootlogs/logcat\.log(\.1)? u:object_r:misc_logd_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint-service\.beanpod u:object_r:hal_keymint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.security\.sharedsecret-service\.beanpod u:object_r:hal_keymint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.security\.secureclock-service\.beanpod u:object_r:hal_keymint_default_exec:s0

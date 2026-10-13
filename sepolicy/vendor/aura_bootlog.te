@@ -4,6 +4,11 @@ type aura_bootlog_file, file_type;
 init_daemon_domain(aura_bootlog)
 
 userdebug_or_eng(`
+    # logpersist may only write misc_logd_file, as required by platform policy.
+    allow logpersist metadata_file:dir search;
+    allow logpersist aura_bootlog_file:dir rw_dir_perms;
+    type_transition logpersist aura_bootlog_file:file misc_logd_file "logcat.log";
+    type_transition logpersist aura_bootlog_file:file misc_logd_file "logcat.log.1";
     allow aura_bootlog self:global_capability2_class_set syslog;
     allow aura_bootlog kernel:system syslog_read;
     allow aura_bootlog kmsg_device:chr_file r_file_perms;

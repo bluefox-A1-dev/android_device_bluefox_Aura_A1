@@ -42,21 +42,22 @@ static int write_all(int fd, const void *data, size_t len) {
     return 0;
 }
 
-static void status_message(int fd, const char *format, ...) {
+static int status_message(int fd, const char *format, ...) {
     char line[512];
     va_list args;
     va_start(args, format);
     int n = vsnprintf(line, sizeof(line), format, args);
     va_end(args);
-    if (n <= 0) return;
+    if (n <= 0) { errno = EIO; return -1; }
     size_t len = (size_t)n < sizeof(line) ? (size_t)n : sizeof(line) - 1;
     if (fd != STDERR_FILENO) {
         struct stat st;
-        if (fstat(fd, &st) || st.st_size < 0 ||
-            (unsigned long long)st.st_size + len > STATUS_LIMIT) return;
+        if (fstat(fd, &st)) return -1;
+        if (st.st_size < 0 || (unsigned long long)st.st_size + len > STATUS_LIMIT) return 0;
     }
     /* Best effort: a filesystem failure or SELinux may also block this write. */
-    write_all(fd, line, len);
+    if (write_all(fd, line, len)) return -1;
+    return fd == STDERR_FILENO ? 0 : fdatasync(fd);
 }
 
 static void pause_poll(void) {
@@ -142,7 +143,10 @@ static int append_record(int dir, const char *name, const char *data, size_t len
     int fd = openat(dir, name, O_CREAT | O_APPEND | O_WRONLY | O_NOFOLLOW | O_CLOEXEC | O_DSYNC, 0600);
     if (fd < 0) return -1;
     int rc = write_all(fd, data, len);
+    if (!rc) rc = fdatasync(fd);
+    int saved_errno = errno;
     close(fd);
+    if (rc) errno = saved_errno;
     return rc;
 }
 
@@ -211,8 +215,13 @@ static int collect(int early) {
                 if (status < 0) {
                     reason = "open-status"; exit_error = errno; goto done;
                 }
-                status_message(status, "start phase=%s pid=%ld boot-id=%sbuffered=%zu\n",
-                        early ? "early" : "init-service", (long)getpid(), id, buffered);
+                if (status_message(status, "start phase=%s pid=%ld boot-id=%sbuffered=%zu\n",
+                                   early ? "early" : "init-service", (long)getpid(), id, buffered)) {
+                    reason = "write-status"; exit_error = errno; goto done;
+                }
+                if (fsync(dir)) {
+                    reason = "sync-directory"; exit_error = errno; goto done;
+                }
                 char header[160];
                 int n = snprintf(header, sizeof(header), "# Aura bootlog phase=%s pid=%ld boot-id=%s",
                                  early ? "early" : "init-service", (long)getpid(), id);
@@ -233,13 +242,23 @@ static int collect(int early) {
                     pos += count;
                 }
                 buffered = 0;
-                status_message(status, "buffer-flushed elapsed=%ld\n", (long)(now.tv_sec - start.tv_sec));
+                if (fsync(dir)) {
+                    reason = "sync-directory"; exit_error = errno; goto done;
+                }
+                if (status_message(status, "buffer-flushed elapsed=%ld\n", (long)(now.tv_sec - start.tv_sec))) {
+                    reason = "write-status"; exit_error = errno; goto done;
+                }
             }
         }
         if (status >= 0 && now.tv_sec - start.tv_sec - last_status >= 5) {
             last_status = now.tv_sec - start.tv_sec;
-            status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
-                    (long)last_status, records, bytes, overruns, dropped, open_error);
+            if (fsync(dir)) {
+                reason = "sync-directory"; exit_error = errno; goto done;
+            }
+            if (status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
+                               (long)last_status, records, bytes, overruns, dropped, open_error)) {
+                reason = "write-status"; exit_error = errno; goto done;
+            }
         }
         if (kmsg >= 0) {
             ssize_t n = read(kmsg, record, sizeof(record) - 1);
@@ -278,6 +297,7 @@ done:
             "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
             reason, exit_error, exit_error ? strerror(exit_error) : "none",
             (long)(now.tv_sec - start.tv_sec), records, bytes, buffered, overruns, dropped, open_error);
+    if (dir >= 0) fsync(dir);
     if (status >= 0) close(status);
     if (dir >= 0) close(dir);
     if (kmsg >= 0) close(kmsg);

@@ -5,6 +5,7 @@
 #endif
 #include <errno.h>
 #include <fcntl.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,11 +21,14 @@
 #define BUFFER_SIZE (1024 * 1024)
 #define KMSG_LIMIT (2 * 1024 * 1024)
 #define INIT_LIMIT (512 * 1024)
+#define STATUS_LIMIT (64 * 1024)
 
 /* Separate files for the bootstrap and managed daemon; keep one previous boot
- * and one within-boot rotation. Maximum log content is approximately 20 MiB. */
-static const char *files[] = {"early-kmsg.log", "early-init.log", "kmsg.log", "init.log"};
+ * and one within-boot rotation. Maximum log content is below 21 MiB. */
+static const char *files[] = {"early-kmsg.log", "early-init.log", "kmsg.log", "init.log",
+                              "early-status.log", "status.log"};
 static char pending[BUFFER_SIZE];
+static char record[65537];
 
 static int write_all(int fd, const void *data, size_t len) {
     const char *p = data;
@@ -36,6 +40,23 @@ static int write_all(int fd, const void *data, size_t len) {
         len -= (size_t)n;
     }
     return 0;
+}
+
+static void status_message(int fd, const char *format, ...) {
+    char line[512];
+    va_list args;
+    va_start(args, format);
+    int n = vsnprintf(line, sizeof(line), format, args);
+    va_end(args);
+    if (n <= 0) return;
+    size_t len = (size_t)n < sizeof(line) ? (size_t)n : sizeof(line) - 1;
+    if (fd != STDERR_FILENO) {
+        struct stat st;
+        if (fstat(fd, &st) || st.st_size < 0 ||
+            (unsigned long long)st.st_size + len > STATUS_LIMIT) return;
+    }
+    /* Best effort: a filesystem failure or SELinux may also block this write. */
+    write_all(fd, line, len);
 }
 
 static void pause_poll(void) {
@@ -65,7 +86,7 @@ static int enough_space(int fd) {
 }
 
 static int log_directory(int meta, const char *id) {
-    if (!enough_space(meta)) return -1;
+    if (!enough_space(meta)) { errno = ENOSPC; return -1; }
     if (mkdirat(meta, LOG_DIR, 0700) && errno != EEXIST) return -1;
     int dir = openat(meta, LOG_DIR, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC);
     if (dir < 0) return -1;
@@ -108,7 +129,7 @@ static int log_directory(int meta, const char *id) {
 }
 
 static int append_record(int dir, const char *name, const char *data, size_t len, size_t limit) {
-    if (!enough_space(dir)) return 0;
+    if (!enough_space(dir)) { errno = ENOSPC; return -1; }
     struct stat st;
     if (!fstatat(dir, name, &st, AT_SYMLINK_NOFOLLOW) &&
         (unsigned long long)st.st_size + len > limit) {
@@ -135,9 +156,13 @@ static int save_record(int dir, int early, const char *record, size_t len) {
 }
 
 static int collect(int early) {
-    int proc = -1, kmsg = -1, dir = -1;
-    char id[80] = {0}, record[8193];
+    int proc = -1, kmsg = -1, dir = -1, status = -1;
+    int exit_error = 0, open_error = 0;
+    const char *reason = "timeout";
+    char id[80] = {0};
     size_t buffered = 0;
+    unsigned long long records = 0, bytes = 0, overruns = 0, dropped = 0;
+    time_t last_status = -5;
     struct timespec start, now;
     clock_gettime(CLOCK_MONOTONIC, &start);
     for (;;) {
@@ -168,6 +193,7 @@ static int collect(int early) {
         if (kmsg < 0) {
             kmsg = open("/dev/kmsg", O_RDONLY | O_NONBLOCK | O_CLOEXEC);
             if (kmsg >= 0) lseek(kmsg, 0, SEEK_SET);
+            open_error = kmsg < 0 ? errno : 0;
         }
         if (dir < 0 && id[0] && (!early || proc >= 0)) {
             int meta = metadata_fd(proc, early);
@@ -176,10 +202,23 @@ static int collect(int early) {
                 close(meta);
             }
             if (dir >= 0) {
+                /* Keep this descriptor open so reporting a later openat failure
+                 * does not depend on opening another file. SELinux can still
+                 * deny writes to an existing descriptor. */
+                status = openat(dir, files[early ? 4 : 5],
+                                O_CREAT | O_APPEND | O_WRONLY | O_NOFOLLOW | O_CLOEXEC | O_DSYNC,
+                                0600);
+                if (status < 0) {
+                    reason = "open-status"; exit_error = errno; goto done;
+                }
+                status_message(status, "start phase=%s pid=%ld boot-id=%sbuffered=%zu\n",
+                        early ? "early" : "init-service", (long)getpid(), id, buffered);
                 char header[160];
                 int n = snprintf(header, sizeof(header), "# Aura bootlog phase=%s pid=%ld boot-id=%s",
                                  early ? "early" : "init-service", (long)getpid(), id);
-                if (save_record(dir, early, header, (size_t)n)) break;
+                if (save_record(dir, early, header, (size_t)n)) {
+                    reason = "write-header"; exit_error = errno; goto done;
+                }
                 size_t pos = 0;
                 while (pos < buffered) {
                     char *end = memchr(pending + pos, '\n', buffered - pos);
@@ -188,22 +227,35 @@ static int collect(int early) {
                     pending[pos + count] = 0;
                     int rc = save_record(dir, early, pending + pos, count);
                     pending[pos + count] = saved;
-                    if (rc) goto done;
+                    if (rc) {
+                        reason = "flush-buffer"; exit_error = errno; goto done;
+                    }
                     pos += count;
                 }
                 buffered = 0;
+                status_message(status, "buffer-flushed elapsed=%ld\n", (long)(now.tv_sec - start.tv_sec));
             }
+        }
+        if (status >= 0 && now.tv_sec - start.tv_sec - last_status >= 5) {
+            last_status = now.tv_sec - start.tv_sec;
+            status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
+                    (long)last_status, records, bytes, overruns, dropped, open_error);
         }
         if (kmsg >= 0) {
             ssize_t n = read(kmsg, record, sizeof(record) - 1);
             if (n > 0) {
+                ++records;
+                bytes += (unsigned long long)n;
                 record[n] = 0;
                 if (dir >= 0) {
-                    if (save_record(dir, early, record, (size_t)n)) break;
+                    if (save_record(dir, early, record, (size_t)n)) {
+                        reason = "write-record"; exit_error = errno; goto done;
+                    }
                 } else {
                     if (buffered + (size_t)n >= sizeof(pending)) {
                         char *cut = memchr(pending + buffered / 2, '\n', buffered - buffered / 2);
                         size_t drop = cut ? (size_t)(cut - pending) + 1 : buffered;
+                        dropped += drop;
                         memmove(pending, pending + drop, buffered - drop);
                         buffered -= drop;
                     }
@@ -213,16 +265,24 @@ static int collect(int early) {
                 }
                 continue;
             }
-            if (n < 0 && errno == EPIPE) continue;
-            if (n < 0 && errno != EAGAIN && errno != EINTR) break;
+            if (n < 0 && errno == EPIPE) { ++overruns; continue; }
+            if (n < 0 && errno != EAGAIN && errno != EINTR) {
+                reason = "read-kmsg"; exit_error = errno; goto done;
+            }
         }
         pause_poll();
     }
 done:
+    clock_gettime(CLOCK_MONOTONIC, &now);
+    status_message(status >= 0 ? status : STDERR_FILENO,
+            "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
+            reason, exit_error, exit_error ? strerror(exit_error) : "none",
+            (long)(now.tv_sec - start.tv_sec), records, bytes, buffered, overruns, dropped, open_error);
+    if (status >= 0) close(status);
     if (dir >= 0) close(dir);
     if (kmsg >= 0) close(kmsg);
     if (proc >= 0) close(proc);
-    return 0;
+    return exit_error ? 1 : 0;
 }
 
 int main(int argc, char **argv) {

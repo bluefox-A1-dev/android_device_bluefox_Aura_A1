@@ -5,3 +5,14 @@
 
 soong_namespace {
 }
+
+// Stock services and interface libraries are prebuilt. Register their HIDL
+// identities for libhidlmetadata and host_init_verifier without generating HALs.
+prebuilt_hidl_interfaces {
+    name: "aura_stock_mediatek_hidl_interfaces",
+    interfaces: [
+        "vendor.mediatek.hardware.aee@1.0::IAee",
+        "vendor.mediatek.hardware.aee@1.1::IAee",
+        "vendor.mediatek.hardware.atci@1.0::IAtcid",
+    ],
+}

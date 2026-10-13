@@ -143,7 +143,20 @@ static int collect(int early) {
     for (;;) {
         clock_gettime(CLOCK_MONOTONIC, &now);
         if (early && now.tv_sec - start.tv_sec >= 120) break;
-        if (proc < 0) proc = open("/proc", O_RDONLY | O_DIRECTORY | O_CLOEXEC);
+        if (proc < 0) {
+            int candidate = open("/proc", O_RDONLY | O_DIRECTORY | O_CLOEXEC);
+            if (candidate >= 0) {
+                struct statfs st;
+                /* PID1 has not necessarily mounted procfs yet. Pinning the
+                 * empty ramdisk directory would hide that later mount forever,
+                 * preventing both boot-id reads and following PID1's root. */
+                if (!fstatfs(candidate, &st) && (unsigned long)st.f_type == 0x9fa0UL) {
+                    proc = candidate;
+                } else {
+                    close(candidate);
+                }
+            }
+        }
         if (proc >= 0 && !id[0]) {
             int fd = openat(proc, "sys/kernel/random/boot_id", O_RDONLY | O_CLOEXEC);
             if (fd >= 0) {

@@ -12,9 +12,3 @@ on post-fs
     setprop sys.usb.configfs 1
     setprop sys.usb.config adb
     start adbd
-
-# Retained userdata must not restore a USB mode without ADB during bring-up.
-on load_persist_props_action
-    setprop persist.sys.usb.config adb
-    setprop sys.usb.config adb
-    start adbd

@@ -85,5 +85,6 @@
   "android.media.soundtrigger.types-V3-ndk": "android.media.soundtrigger.types-V3-ndk_aura",
   "android.system.keystore2-V1-ndk": "android.system.keystore2-V1-ndk_aura",
   "android.system.suspend-V1-ndk": "android.system.suspend-V1-ndk_aura",
-  "libvibratorutils": "libvibratorutils_aura"
+  "libvibratorutils": "libvibratorutils_aura",
+  "libaudioutils": "libaudioutils_aura"
 }

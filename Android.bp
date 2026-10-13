@@ -19,7 +19,6 @@ cc_binary {
     srcs: ["debug/bootlog.c"],
     vendor: true,
     compile_multilib: "64",
-    static_executable: true,
     stl: "none",
     cflags: ["-Wall", "-Wextra", "-Werror"],
 }

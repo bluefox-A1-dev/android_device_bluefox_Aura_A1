@@ -23,6 +23,14 @@ def vendor_library_name(lib, partition, *args, **kwargs):
 def write_vendor_metadata(ctx, packages):
     encoder = BpJSONEncoder(legacy=ctx.legacy)
     extra = []
+    for stem,targets in config.get('elf_modules',{}).items():
+        name = stem+'_aura_vendor'
+        (BpBuilder(encoder).set_rule_name('cc_prebuilt_library_shared').name(name)
+         .set('stem',stem).set('owner','bluefox').set('soc_specific',True)
+         .set('strip',{'none':True}).set('target',targets)
+         .set('compile_multilib','both').set('relative_install_path','mt6789')
+         .set('prefer',True).write(ctx.bp_out))
+        extra.append(name)
     for entry in config['symlinks']:
         path = entry['path'].removeprefix('vendor/')
         name = 'aura_link_'+re.sub(r'[^a-zA-Z0-9_]','_',path)+'_'+hashlib.sha1(path.encode()).hexdigest()[:8]
@@ -81,6 +89,14 @@ for path,replacements in config.get('text_fixups',{}).items():
     fixup = blob_fixup()
     for old,new in replacements: fixup.regex_replace(re.escape(old)+r'(?:_aura)*(?![\w.-])',new)
     blob_fixups[path] = fixup
+
+elf_fixups = json.loads((Path(__file__).resolve().parent/'configs/elf-fixups.json').read_text())
+for path,symbols in elf_fixups.get('clear_versions',{}).items():
+    fixup = blob_fixups.setdefault(path,blob_fixup())
+    for symbol in symbols: fixup.clear_symbol_version(symbol)
+for path,needed in elf_fixups.get('add_needed',{}).items():
+    fixup = blob_fixups.setdefault(path,blob_fixup())
+    for library in needed: fixup.add_needed(library)
 
 module = ExtractUtilsModule('Aura_A1','bluefox',
     blob_fixups=blob_fixups,

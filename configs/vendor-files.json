@@ -2107,6 +2107,9 @@
     "android.system.keystore2-V1-ndk_aura": [
       64
     ],
+    "chremetrics-cpp_aura": [
+      64
+    ],
     "android.hardware.audio.effect.aidl-impl-mediatek": [
       64
     ],
@@ -6774,10 +6777,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib64/chremetrics-cpp.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7529,6 +7528,10 @@
       [
         "android.media.soundtrigger.types-V1-ndk.so",
         "android.media.soundtrigger.types-V1-ndk_aura.so"
+      ],
+      [
+        "chremetrics-cpp.so",
+        "chremetrics-cpp_aura.so"
       ]
     ],
     "vendor/bin/hw/android.hardware.drm-service.clearkey_aura": [
@@ -9721,5 +9724,35 @@
         "/vendor/etc/init/android.hardware.health-service.example_aura.rc"
       ]
     ]
+  },
+  "elf_modules": {
+    "libneuron_adapter_mgvi": {
+      "android_arm": {
+        "srcs": [
+          "proprietary/vendor/lib/mt6789/libneuron_adapter_mgvi.so"
+        ],
+        "shared_libs": [
+          "libnativewindow",
+          "libm",
+          "libdl",
+          "libz",
+          "liblog",
+          "libc"
+        ]
+      },
+      "android_arm64": {
+        "srcs": [
+          "proprietary/vendor/lib64/mt6789/libneuron_adapter_mgvi.so"
+        ],
+        "shared_libs": [
+          "libnativewindow",
+          "libm",
+          "libdl",
+          "libz",
+          "liblog",
+          "libc"
+        ]
+      }
+    }
   }
 }

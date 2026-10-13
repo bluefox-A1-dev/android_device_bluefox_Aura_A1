@@ -9,6 +9,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Preserve the stock vendor library export through the generated linker config.
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.json
 
+# The matched stock GKI is 4K; some OEM utilities also have 4K ELF alignment.
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := true

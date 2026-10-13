@@ -86,5 +86,6 @@
   "android.system.keystore2-V1-ndk": "android.system.keystore2-V1-ndk_aura",
   "android.system.suspend-V1-ndk": "android.system.suspend-V1-ndk_aura",
   "libvibratorutils": "libvibratorutils_aura",
-  "libaudioutils": "libaudioutils_aura"
+  "libaudioutils": "libaudioutils_aura",
+  "chremetrics-cpp": "chremetrics-cpp_aura"
 }

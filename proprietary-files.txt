@@ -1300,7 +1300,7 @@ vendor/lib/mt6789/libmtkcam_stdutils.so;MODULE_SUFFIX=_aura_vendor|ad4af184f3099
 vendor/lib/mt6789/libmtkcam_sysutils.so;MODULE_SUFFIX=_aura_vendor|8c93780ee816ac07007fd6ceec7f3808a1f8cbc3
 vendor/lib/mt6789/libmtkcam_tuning_utils.so;MODULE_SUFFIX=_aura_vendor|551a3a71f016333a75955fb0ed13aedf84a88404
 vendor/lib/mt6789/libmtkcam_ulog.so;MODULE_SUFFIX=_aura_vendor|3ce41c7fe008b4bc9214e7ae2d162e2f56384f64
-vendor/lib/mt6789/libneuron_adapter_mgvi.so;MODULE_SUFFIX=_aura_vendor|17f7f76d9cb6dde33fee915bc9fe3c332505b486
+vendor/lib/mt6789/libneuron_adapter_mgvi.so;EXTRACT_ONLY|17f7f76d9cb6dde33fee915bc9fe3c332505b486
 vendor/lib/mt6789/libpq_cust_base.so;MODULE_SUFFIX=_aura_vendor|33285991652567d05eeec0c1894e5c6430e060d3
 vendor/lib/mt6789/libpq_sec.so;MODULE_SUFFIX=_aura_vendor|ae3c9924c804ebf0159dcca3ef99731563622024
 vendor/lib/mt6789/libpqconfig.so;MODULE_SUFFIX=_aura_vendor|460be2e1342a1998e55e051aa358d7979c9213f7
@@ -1466,6 +1466,7 @@ vendor/lib64/android.media.soundtrigger.types-V1-ndk.so:vendor/lib64/android.med
 vendor/lib64/android.media.soundtrigger.types-V3-ndk.so:vendor/lib64/android.media.soundtrigger.types-V3-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME|a72d21c88305e19f68956ed6beaccf868d74143b
 vendor/lib64/android.system.keystore2-V1-ndk.so:vendor/lib64/android.system.keystore2-V1-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME|f47549c1fc9e21708a8b1a2ce24bf5f65255365b
 vendor/lib64/android.system.suspend-V1-ndk.so:vendor/lib64/android.system.suspend-V1-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME|d86a4df82819d74af373166350d145f94b5075f2
+vendor/lib64/chremetrics-cpp.so:vendor/lib64/chremetrics-cpp_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME|511d4594ee3811c063ae356a467b0b0af9975094
 vendor/lib64/egl/libGLES_meow.so;MODULE_SUFFIX=_aura_vendor|655535831d86e8947c4c1b113c553d46ae734eb0
 vendor/lib64/egl/libMEOW_data.so;MODULE_SUFFIX=_aura_vendor|08b02b06d59559fa5dbd102b2798a643d2f1b9b5
 vendor/lib64/egl/libMEOW_gift.so;MODULE_SUFFIX=_aura_vendor|efee206a1d5c868d36f719fb6605a1ccc8513550
@@ -2086,7 +2087,7 @@ vendor/lib64/mt6789/libmtkcam_synchelper.so;MODULE_SUFFIX=_aura_vendor|197316705
 vendor/lib64/mt6789/libmtkcam_sysutils.so;MODULE_SUFFIX=_aura_vendor|b208e317897af323ddb6b503f183ff18c42ce072
 vendor/lib64/mt6789/libmtkcam_tuning_utils.so;MODULE_SUFFIX=_aura_vendor|9e843980f55cf21a4af7e4f3da38d0ff58502193
 vendor/lib64/mt6789/libmtkcam_ulog.so;MODULE_SUFFIX=_aura_vendor|7470fce498d93045812682632a4b7524596d5bf2
-vendor/lib64/mt6789/libneuron_adapter_mgvi.so;MODULE_SUFFIX=_aura_vendor|a9f77725f4c45065dedbadbc2e36567e914e4ca0
+vendor/lib64/mt6789/libneuron_adapter_mgvi.so;EXTRACT_ONLY|a9f77725f4c45065dedbadbc2e36567e914e4ca0
 vendor/lib64/mt6789/libneuron_runtime.6.so;MODULE_SUFFIX=_aura_vendor|393a8a570c9d9076907368726abfee6f6492e4de
 vendor/lib64/mt6789/libneuron_runtime.7.so;MODULE_SUFFIX=_aura_vendor|0779f6c824cba20b522b19c8ab8ef4590b7f0a5e
 vendor/lib64/mt6789/libneuron_runtime.8.so;MODULE_SUFFIX=_aura_vendor|fa24466047a681d84489c6cd70335ab76f8955e6

@@ -50,6 +50,7 @@ def main():
     private = json.loads(private_file.read_text()) if private_file.is_file() else {}
     needed_fixups = {}
     text_fixups = {}
+    elf_modules = {}
     renamed_file = root/'configs/renamed-binaries.json'
     renamed = json.loads(renamed_file.read_text()) if renamed_file.is_file() else {}
     config_renames = root/'configs/renamed-configs.json'
@@ -113,6 +114,14 @@ def main():
                 needed = re.findall(r'\(NEEDED\).*\[(.*?)\]',dynamic)
                 replacements = [[old+'.so',new+'.so'] for old,new in private.items() if old+'.so' in needed]
                 if replacements: needed_fixups[destination] = replacements
+                if relative in ('lib/mt6789/libneuron_adapter_mgvi.so', 'lib64/mt6789/libneuron_adapter_mgvi.so'):
+                    # This OEM ARM ELF has a dynamic string table outside its LOAD
+                    # range. readelf reads its sections; extract-utils finds no deps.
+                    flags = ['EXTRACT_ONLY']
+                    arch = 'android_arm64' if relative.startswith('lib64/') else 'android_arm'
+                    elf_modules.setdefault('libneuron_adapter_mgvi', {})[arch] = dict(
+                        srcs=['proprietary/'+destination],
+                        shared_libs=[private.get(Path(n).stem, Path(n).stem) for n in needed])
         if relative.startswith('etc/') and item.stat().st_size < 1024*1024:
             try: body = item.read_text()
             except UnicodeDecodeError: body = ''
@@ -139,7 +148,7 @@ def main():
         text += '\n# '+name+'\n'+'\n'.join(entries)+'\n'
     (root/'proprietary-files.txt').write_text(text)
     (root/'configs').mkdir(exist_ok=True)
-    (root/'configs/vendor-files.json').write_text(json.dumps(dict(libraries=libraries,special=special,symlinks=symlinks,excluded=excluded,needed_fixups=needed_fixups,text_fixups=text_fixups),indent=2)+'\n')
+    (root/'configs/vendor-files.json').write_text(json.dumps(dict(libraries=libraries,special=special,symlinks=symlinks,excluded=excluded,needed_fixups=needed_fixups,text_fixups=text_fixups,elf_modules=elf_modules),indent=2)+'\n')
     # Last stock assignment wins; omit build-generated identity and ABI values.
     props = {}
     for line in (source/'build.prop').read_text().splitlines():

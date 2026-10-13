@@ -146,9 +146,10 @@ def main():
         if '=' in line and not line.startswith('#'):
             key,value = line.split('=',1);props[key]=value
     skip = ('ro.product.', 'ro.vendor.product.', 'ro.vendor.build.', 'ro.odm.build.', 'ro.board.', 'ro.boot.',
-            'ro.virtual_ab.', 'ro.zygote', 'ro.build.', 'ro.treble.')
+            'ro.virtual_ab.', 'ro.zygote', 'ro.build.', 'ro.treble.', 'ro.bionic.', 'dalvik.vm.isa.',
+            'ro.minui.pixel_format', 'ro.hwui.use_vulkan')
     (root/'vendor.prop').write_text('# Hardware tuning from stock 20260930, with generated identity omitted.\n'+
-        '\n'.join(k+'='+v for k,v in props.items() if not k.startswith(skip))+'\n')
+        '\n'.join(k+'='+v for k,v in props.items() if not k.startswith(skip) and v)+'\n')
     print('Listed',sum(map(len,sections.values())),'files,',len(symlinks),'symlinks;',len(excluded),'generated files excluded')
 
 

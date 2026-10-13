@@ -20,6 +20,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 TARGET_BOARD_PLATFORM := mt6789
+BOARD_SHIPPING_API_LEVEL := 31
 TARGET_SCREEN_DENSITY := 320
 
 # Bootloader and physical partitions (stock scatter, shared by both slots).
@@ -93,11 +94,17 @@ BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
 BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
 BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
 
-# Keep PLATFORM type, using the single fragment name supported by fsgen.
-# Only modules/fstab belong here; stock init/recovery/policy must not override Lineage.
-BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
-BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.PREBUILT := vendor/bluefox/Aura_A1/proprietary/prebuilt/ramdisk/first-stage.lz4
-BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.MKBOOTIMG_ARGS := --ramdisk_type PLATFORM
+# Partition-scoped signed modules, installed by the standard Android module rules.
+KERNEL_PREBUILT_PATH := vendor/bluefox/Aura_A1/proprietary
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PREBUILT_PATH)/prebuilt/ramdisk/modules/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.ramdisk))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.recovery))
+BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(KERNEL_PREBUILT_PATH)/system_dlkm/lib/modules/*.ko)
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.system))
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PREBUILT_PATH)/vendor_dlkm/lib/modules/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/kernel/modules.load.vendor))
+BOARD_DO_NOT_STRIP_VENDOR_RAMDISK_MODULES := true
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 
 # Recovery resources are built into a separate vendor_boot fragment.
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
@@ -129,8 +136,13 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 4
 BOOT_SECURITY_PATCH := 2026-08-05
 VENDOR_SECURITY_PATCH := 2026-08-05
 
-# Vendor manifest stays in the stock vendor image; acknowledge vendor extensions.
+# Stock HAL declarations are assembled from extracted VINTF files.
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+
+# Source-built MTK policy, with Aura-specific service paths.
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

@@ -10,7 +10,6 @@ import subprocess
 import shutil
 import sys
 
-from extract.ramdisk import pack_first_stage
 
 
 def main():
@@ -32,14 +31,9 @@ def main():
     if not status['complete']:
         p.error('Incomplete extraction / OTA COW snapshots are not a supported blob source')
     inputs = {
-        'vendor.img': 'images/vendor_a.img',
-        'vendor_dlkm.img': 'images/vendor_dlkm_a.img',
-        'system_dlkm.img': 'images/system_dlkm_a.img',
-        'odm_dlkm.img': 'images/odm_dlkm_a.img',
         'kernel/Image.lz4': 'boot/kernel',
         'kernel/dtb.img': 'vendor_boot/dtb',
         'kernel/dtbo.img': 'dtbo.img',
-        'ramdisk/platform.lz4': 'vendor_boot/vendor_ramdisk00',
     }
     manifest = {}
     for destination, relative in inputs.items():
@@ -51,10 +45,6 @@ def main():
         dst.symlink_to(src)
         with src.open('rb') as f:
             manifest[f'prebuilt/{destination}'] = hashlib.file_digest(f, 'sha256').hexdigest()
-    first_stage = out / 'prebuilt/ramdisk/first-stage.lz4'
-    pack_first_stage(source / 'vendor_boot/vendor_ramdisk00-root', first_stage)
-    with first_stage.open('rb') as f:
-        manifest['prebuilt/ramdisk/first-stage.lz4'] = hashlib.file_digest(f, 'sha256').hexdigest()
     modules = source / 'vendor_boot/vendor_ramdisk00-root/lib/modules'
     if len(list(modules.glob('*.ko'))) != 174:
         p.error('Unexpected vendor ramdisk module set; update the matched release and file list first')

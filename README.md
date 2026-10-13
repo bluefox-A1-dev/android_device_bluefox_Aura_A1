@@ -1,8 +1,9 @@
 # BLUEFOX Aura A1
 
 LineageOS 23.2 device tree, branched from the Q25 skeleton at `49f5961`.
-The first build keeps the matched 20260930 stock vendor/DLKM images and GKI;
-Android system, product, system_ext, init_boot and recovery are built from source.
+The vendor and DLKM partitions are built from pinned file-level stock blobs and
+partition-scoped signed modules. The matched 20260930 GKI and DTB/DTBO remain
+prebuilt. SELinux uses the common Lineage MTK policy with device additions.
 
 From a Lineage checkout, prepare a complete stock package and run extract-utils:
 

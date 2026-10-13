@@ -3,8 +3,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Preserve the heap tuning in the prebuilt stock vendor properties.
+# Hardware tuning is kept in vendor.prop.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Preserve the stock vendor library export through the generated linker config.
+PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.json
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -28,6 +31,10 @@ PRODUCT_PACKAGES += \
 # Preserve the stock phone UI flags; display/brightness overlays stay in vendor.
 PRODUCT_PACKAGES += FrameworksResOverlayAuraA1
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# First-stage fstab and vendor fstab use the same original mount/FBE settings.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6789:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6789
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36

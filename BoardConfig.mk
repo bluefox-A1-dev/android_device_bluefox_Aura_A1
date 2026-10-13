@@ -95,6 +95,11 @@ BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
 BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
 BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
 
+# Temporary bring-up setting: retain AVC diagnostics without enforcing policy.
+ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
+endif
+
 # Partition-scoped signed modules, installed by the standard Android module rules.
 KERNEL_PREBUILT_PATH := vendor/bluefox/Aura_A1/proprietary
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PREBUILT_PATH)/prebuilt/ramdisk/modules/*.ko)

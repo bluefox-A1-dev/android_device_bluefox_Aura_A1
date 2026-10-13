@@ -12,6 +12,13 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.js
 # The matched stock GKI is 4K; some OEM utilities also have 4K ELF alignment.
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
 
+# First-boot debugging: consumed by Lineage common.mk after this device file.
+ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
+WITH_ADB_INSECURE := true
+PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=adb
+PRODUCT_PACKAGES += init.Aura_A1.adb.rc
+endif
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := true

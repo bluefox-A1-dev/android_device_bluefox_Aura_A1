@@ -6,6 +6,14 @@
 soong_namespace {
 }
 
+prebuilt_etc {
+    name: "init.Aura_A1.adb.rc",
+    src: "rootdir/etc/init.Aura_A1.adb.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
 // Stock services and interface libraries are prebuilt. Register their HIDL
 // identities for libhidlmetadata and host_init_verifier without generating HALs.
 prebuilt_hidl_interfaces {

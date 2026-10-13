@@ -17,6 +17,7 @@ ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
 WITH_ADB_INSECURE := true
 PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=adb
 PRODUCT_PACKAGES += init.Aura_A1.adb.rc
+PRODUCT_PACKAGES += aura_bootlog init.Aura_A1.bootlog.rc
 endif
 
 # Dynamic partitions

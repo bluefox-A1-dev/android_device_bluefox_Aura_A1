@@ -1,0 +1,20 @@
+type aura_bootlog, domain;
+type aura_bootlog_exec, exec_type, vendor_file_type, file_type;
+type aura_bootlog_file, file_type;
+init_daemon_domain(aura_bootlog)
+
+userdebug_or_eng(`
+    allow aura_bootlog self:global_capability2_class_set syslog;
+    allow aura_bootlog kernel:system syslog_read;
+    allow aura_bootlog kmsg_device:chr_file r_file_perms;
+    allow aura_bootlog proc:dir r_dir_perms;
+    allow aura_bootlog proc_random:file r_file_perms;
+    allow aura_bootlog metadata_file:dir search;
+    allow aura_bootlog fs_type:filesystem getattr;
+    allow aura_bootlog aura_bootlog_file:dir create_dir_perms;
+    allow aura_bootlog aura_bootlog_file:file create_file_perms;
+    allow init aura_bootlog_file:dir { create_dir_perms relabelto };
+    allow init aura_bootlog_file:file { create_file_perms relabelto };
+    allow recovery aura_bootlog_file:dir r_dir_perms;
+    allow recovery aura_bootlog_file:file r_file_perms;
+')

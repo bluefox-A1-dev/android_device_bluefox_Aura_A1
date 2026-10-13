@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+service aura-bootlog /vendor/bin/aura_bootlog
+    class core
+    user root
+    group root
+    capabilities SYSLOG
+    disabled
+    oneshot
+
+# Metadata is already mounted by first-stage init. Never mount or format it here.
+on post-fs
+    mkdir /metadata/aura-bootlogs 0700 root root
+    restorecon_recursive /metadata/aura-bootlogs
+    start aura-bootlog
+
+on property:sys.boot_completed=1
+    stop aura-bootlog

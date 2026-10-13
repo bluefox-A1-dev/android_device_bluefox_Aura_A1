@@ -14,6 +14,24 @@ prebuilt_etc {
     system_ext_specific: true,
 }
 
+cc_binary {
+    name: "aura_bootlog",
+    srcs: ["debug/bootlog.c"],
+    vendor: true,
+    compile_multilib: "64",
+    static_executable: true,
+    stl: "none",
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}
+
+prebuilt_etc {
+    name: "init.Aura_A1.bootlog.rc",
+    src: "rootdir/etc/init.Aura_A1.bootlog.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
 // Stock services and interface libraries are prebuilt. Register their HIDL
 // identities for libhidlmetadata and host_init_verifier without generating HALs.
 prebuilt_hidl_interfaces {

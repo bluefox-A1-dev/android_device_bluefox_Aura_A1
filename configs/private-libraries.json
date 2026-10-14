@@ -85,6 +85,11 @@
   "android.media.soundtrigger.types-V3-ndk": "android.media.soundtrigger.types-V3-ndk_aura",
   "android.system.keystore2-V1-ndk": "android.system.keystore2-V1-ndk_aura",
   "android.system.suspend-V1-ndk": "android.system.suspend-V1-ndk_aura",
+  "lib_android_keymaster_keymint_utils": "lib_android_keymaster_keymint_utils_aura",
+  "libkeymaster_messages": "libkeymaster_messages_aura",
+  "libkeymaster_portable": "libkeymaster_portable_aura",
+  "libkeymint": "libkeymint_aura",
+  "libpuresoftkeymasterdevice": "libpuresoftkeymasterdevice_aura",
   "libvibratorutils": "libvibratorutils_aura",
   "libaudioutils": "libaudioutils_aura",
   "chremetrics-cpp": "chremetrics-cpp_aura"

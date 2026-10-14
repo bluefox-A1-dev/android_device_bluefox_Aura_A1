@@ -2161,6 +2161,9 @@
     "libMcClient": [
       64
     ],
+    "lib_android_keymaster_keymint_utils_aura": [
+      64
+    ],
     "libaaa_flickerutil": [
       64
     ],
@@ -2245,6 +2248,15 @@
     "libjpeg-alpha_vendor": [
       64
     ],
+    "libkeymaster_messages_aura": [
+      64
+    ],
+    "libkeymaster_portable_aura": [
+      64
+    ],
+    "libkeymint_aura": [
+      64
+    ],
     "libkmsetkey": [
       64
     ],
@@ -2303,6 +2315,9 @@
       64
     ],
     "libnputils": [
+      64
+    ],
+    "libpuresoftkeymasterdevice_aura": [
       64
     ],
     "libratconfig": [
@@ -6841,10 +6856,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib64/lib_android_keymaster_keymint_utils.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib64/libaconfig_storage_read_api_cc.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7053,18 +7064,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib64/libkeymaster_messages.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
-      "path": "vendor/lib64/libkeymaster_portable.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
-      "path": "vendor/lib64/libkeymint.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib64/libkeymint_remote_prov_support.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7138,10 +7137,6 @@
     },
     {
       "path": "vendor/lib64/libprotobuf-cpp-lite-21.12.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
-      "path": "vendor/lib64/libpuresoftkeymasterdevice.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -7570,6 +7565,12 @@
         "android.hardware.health-V4-ndk_aura.so"
       ]
     ],
+    "vendor/bin/hw/android.hardware.identity-service.beanpod": [
+      [
+        "libkeymaster_messages.so",
+        "libkeymaster_messages_aura.so"
+      ]
+    ],
     "vendor/bin/hw/android.hardware.ir-service.example_aura": [
       [
         "android.hardware.ir-V1-ndk.so",
@@ -7636,6 +7637,18 @@
       [
         "android.hardware.security.sharedsecret-V1-ndk.so",
         "android.hardware.security.sharedsecret-V1-ndk_aura.so"
+      ],
+      [
+        "lib_android_keymaster_keymint_utils.so",
+        "lib_android_keymaster_keymint_utils_aura.so"
+      ],
+      [
+        "libkeymaster_portable.so",
+        "libkeymaster_portable_aura.so"
+      ],
+      [
+        "libkeymint.so",
+        "libkeymint_aura.so"
       ]
     ],
     "vendor/bin/hw/android.hardware.sensors-service.multihal_aura": [
@@ -7714,6 +7727,18 @@
       [
         "android.hardware.security.keymint-V4-ndk.so",
         "android.hardware.security.keymint-V4-ndk_aura.so"
+      ],
+      [
+        "libkeymaster_portable.so",
+        "libkeymaster_portable_aura.so"
+      ],
+      [
+        "libkeymint.so",
+        "libkeymint_aura.so"
+      ],
+      [
+        "libpuresoftkeymasterdevice.so",
+        "libpuresoftkeymasterdevice_aura.so"
       ]
     ],
     "vendor/bin/hw/wpa_supplicant_aura": [
@@ -9004,6 +9029,12 @@
         "android.hardware.common-V2-ndk_aura.so"
       ]
     ],
+    "vendor/lib64/lib_android_keymaster_keymint_utils_aura.so": [
+      [
+        "android.hardware.security.keymint-V4-ndk.so",
+        "android.hardware.security.keymint-V4-ndk_aura.so"
+      ]
+    ],
     "vendor/lib64/libaimemc.so": [
       [
         "android.hardware.graphics.allocator-V2-ndk.so",
@@ -9138,6 +9169,40 @@
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
+    "vendor/lib64/libkeymint_aura.so": [
+      [
+        "android.hardware.security.keymint-V4-ndk.so",
+        "android.hardware.security.keymint-V4-ndk_aura.so"
+      ],
+      [
+        "android.hardware.security.rkp-V3-ndk.so",
+        "android.hardware.security.rkp-V3-ndk_aura.so"
+      ],
+      [
+        "android.hardware.security.secureclock-V1-ndk.so",
+        "android.hardware.security.secureclock-V1-ndk_aura.so"
+      ],
+      [
+        "android.hardware.security.sharedsecret-V1-ndk.so",
+        "android.hardware.security.sharedsecret-V1-ndk_aura.so"
+      ],
+      [
+        "lib_android_keymaster_keymint_utils.so",
+        "lib_android_keymaster_keymint_utils_aura.so"
+      ],
+      [
+        "libkeymaster_messages.so",
+        "libkeymaster_messages_aura.so"
+      ],
+      [
+        "libkeymaster_portable.so",
+        "libkeymaster_portable_aura.so"
+      ],
+      [
+        "libpuresoftkeymasterdevice.so",
+        "libpuresoftkeymasterdevice_aura.so"
+      ]
+    ],
     "vendor/lib64/libmtkspparser.so": [
       [
         "libaudioutils.so",
@@ -9154,6 +9219,16 @@
       [
         "android.hardware.bluetooth.audio-V4-ndk.so",
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
+      ]
+    ],
+    "vendor/lib64/libpuresoftkeymasterdevice_aura.so": [
+      [
+        "libkeymaster_messages.so",
+        "libkeymaster_messages_aura.so"
+      ],
+      [
+        "libkeymaster_portable.so",
+        "libkeymaster_portable_aura.so"
       ]
     ],
     "vendor/lib64/librilfusion.so": [

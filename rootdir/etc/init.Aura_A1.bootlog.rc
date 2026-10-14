@@ -22,6 +22,7 @@ service aura-logcat /system/bin/logcat -b all -v threadtime -v monotonic -f /met
 on post-fs
     mkdir /metadata/aura-bootlogs 0700 root root
     restorecon_recursive /metadata/aura-bootlogs
+    write /dev/kmsg "aura-keymint: os=${ro.build.version.release:-unknown} system_spl=${ro.build.version.security_patch:-unknown} vendor_spl=${ro.vendor.build.security_patch:-unknown} boot_spl=${ro.bootimage.build.version.security_patch:-unknown} vbstate=${ro.boot.verifiedbootstate:-unknown}"
     start aura-logcat
     start aura-bootlog
 

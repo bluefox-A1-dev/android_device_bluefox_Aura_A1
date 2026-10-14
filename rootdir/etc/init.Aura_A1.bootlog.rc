@@ -3,6 +3,7 @@
 
 service aura-bootlog /vendor/bin/aura_bootlog
     class core
+    shutdown critical
     user root
     group root
     capabilities SYSLOG
@@ -13,6 +14,7 @@ service aura-bootlog /vendor/bin/aura_bootlog
 # This uses the platform's existing logpersist domain and bounded rotation.
 service aura-logcat /system/bin/logcat -b all -v threadtime -v monotonic -f /metadata/aura-bootlogs/logcat.log -r 512 -n 1
     class core
+    shutdown critical
     user root
     group root log
     seclabel u:r:logpersist:s0

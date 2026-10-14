@@ -1052,6 +1052,10 @@
       32,
       64
     ],
+    "libtinyxml2_aura": [
+      32,
+      64
+    ],
     "libtms_log_record": [
       32,
       64
@@ -6424,10 +6428,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib/libtinyxml2.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib/libui.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7205,10 +7205,6 @@
     },
     {
       "path": "vendor/lib64/libtinycompress.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
-      "path": "vendor/lib64/libtinyxml2.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -8051,6 +8047,10 @@
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
       ],
       [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ],
+      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
@@ -8079,6 +8079,10 @@
       [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so": [
@@ -8091,6 +8095,12 @@
       [
         "android.hardware.bluetooth.audio-V5-ndk.so",
         "android.hardware.bluetooth.audio-V5-ndk_aura.so"
+      ]
+    ],
+    "vendor/lib/lib_power_applist.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib/libaudioprimarydevicehalifclient.so": [
@@ -8187,6 +8197,12 @@
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
+    "vendor/lib/libmtkgpuserv.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
     "vendor/lib/libmtkspparser.so": [
       [
         "libaudioutils.so",
@@ -8203,6 +8219,28 @@
       [
         "android.hardware.bluetooth.audio-V4-ndk.so",
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib/libpqxmlflagparser.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib/libpqxmlparser.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib/librt_extamp_intf.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib/libspeechparser_vendor.so": [
@@ -8941,6 +8979,10 @@
         "android.media.audio.common.types-V4-ndk_aura.so"
       ],
       [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ],
+      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
@@ -8967,6 +9009,10 @@
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
       ],
       [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ],
+      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
@@ -8983,6 +9029,10 @@
       [
         "android.hardware.graphics.composer3-V4-ndk.so",
         "android.hardware.graphics.composer3-V4-ndk_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/hw/mt6789/android.hardware.graphics.allocator-V2-mediatek.so": [
@@ -9009,6 +9059,10 @@
       [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so": [
@@ -9033,6 +9087,12 @@
       [
         "android.hardware.security.keymint-V4-ndk.so",
         "android.hardware.security.keymint-V4-ndk_aura.so"
+      ]
+    ],
+    "vendor/lib64/lib_power_applist.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/libaimemc.so": [
@@ -9203,6 +9263,12 @@
         "libpuresoftkeymasterdevice_aura.so"
       ]
     ],
+    "vendor/lib64/libmtkgpuserv.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
     "vendor/lib64/libmtkspparser.so": [
       [
         "libaudioutils.so",
@@ -9219,6 +9285,22 @@
       [
         "android.hardware.bluetooth.audio-V4-ndk.so",
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib64/libpqxmlflagparser.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib64/libpqxmlparser.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/libpuresoftkeymasterdevice_aura.so": [
@@ -9267,6 +9349,18 @@
       [
         "android.hardware.radio.voice-V4-ndk.so",
         "android.hardware.radio.voice-V4-ndk_aura.so"
+      ]
+    ],
+    "vendor/lib64/librt_extamp_intf.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
+      ]
+    ],
+    "vendor/lib64/libsilkybrightnesscore.so": [
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/libspeechparser_vendor.so": [

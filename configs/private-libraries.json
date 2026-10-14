@@ -90,6 +90,7 @@
   "libkeymaster_portable": "libkeymaster_portable_aura",
   "libkeymint": "libkeymint_aura",
   "libpuresoftkeymasterdevice": "libpuresoftkeymasterdevice_aura",
+  "libtinyxml2": "libtinyxml2_aura",
   "libvibratorutils": "libvibratorutils_aura",
   "libaudioutils": "libaudioutils_aura",
   "chremetrics-cpp": "chremetrics-cpp_aura"

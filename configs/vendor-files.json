@@ -2100,6 +2100,9 @@
     "libvpu": [
       64
     ],
+    "libwifi-hal_aura": [
+      64
+    ],
     "libwifical": [
       64
     ],
@@ -7366,10 +7369,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib64/libwifi-hal.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib64/libwifi-system-iface.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7591,6 +7590,12 @@
       [
         "libkeymint.so",
         "libkeymint_aura.so"
+      ]
+    ],
+    "vendor/bin/hw/android.hardware.wifi-service-lazy_aura": [
+      [
+        "libwifi-hal.so",
+        "libwifi-hal_aura.so"
       ]
     ],
     "vendor/bin/hw/mt6789/android.hardware.graphics.allocator-V2-service-mediatek.mt6789": [

@@ -15,5 +15,6 @@
   "libkeymint": "libkeymint_aura",
   "libpuresoftkeymasterdevice": "libpuresoftkeymasterdevice_aura",
   "libtinyxml2": "libtinyxml2_aura",
-  "libvibratorutils": "libvibratorutils_aura"
+  "libvibratorutils": "libvibratorutils_aura",
+  "libwifi-hal": "libwifi-hal_aura"
 }

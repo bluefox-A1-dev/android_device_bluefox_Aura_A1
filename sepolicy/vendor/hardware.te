@@ -9,7 +9,7 @@ get_prop(hal_face_default, camera_config_prop)
 allow hal_face_default fwk_camera_service:service_manager find;
 binder_call(hal_face_default, cameraserver)
 binder_call(cameraserver, hal_face_default)
-allow mtk_hal_pq mtk_hal_composer_ext_service:service_manager find;
+hal_client_domain(mtk_hal_pq, hal_mtk_composer_ext)
 type vendor_aura_nwk_opt_service, service_manager_type, hal_service_type, protected_service;
 hal_attribute_service(hal_nwk_opt, vendor_aura_nwk_opt_service)
 binder_use(mtk_hal_nwk_opt)

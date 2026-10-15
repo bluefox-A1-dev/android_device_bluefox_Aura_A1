@@ -9,6 +9,7 @@ from pathlib import Path
 from extract_utils.bp_builder import BpBuilder
 from extract_utils.bp_encoder import BpJSONEncoder
 from extract_utils.fixups_blob import blob_fixup
+from extract_utils.fixups_lib import lib_fixups as default_lib_fixups
 from extract_utils.main import ExtractUtils, ExtractUtilsModule
 
 config = json.loads((Path(__file__).resolve().parent/'configs/vendor-files.json').read_text())
@@ -100,7 +101,7 @@ for path,needed in elf_fixups.get('add_needed',{}).items():
 
 module = ExtractUtilsModule('Aura_A1','bluefox',
     blob_fixups=blob_fixups,
-    lib_fixups={tuple(config['libraries']):vendor_library_name},
+    lib_fixups={**default_lib_fixups, tuple(config['libraries']):vendor_library_name},
     namespace_imports=['device/bluefox/Aura_A1','hardware/mediatek'])
 module.proprietary_files[0].add_post_makefile_generation_fn(write_vendor_metadata)
 

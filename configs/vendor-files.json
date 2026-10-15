@@ -16,31 +16,7 @@
       32,
       64
     ],
-    "android.frameworks.cameraservice.common-V1-ndk_aura": [
-      32,
-      64
-    ],
-    "android.frameworks.cameraservice.device-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.frameworks.cameraservice.service-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.frameworks.sensorservice-V1-ndk_aura": [
-      32,
-      64
-    ],
     "android.hardware.audio.common-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.audio.common-V4-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.audio.core-V3-ndk_aura": [
       32,
       64
     ],
@@ -48,15 +24,7 @@
       32,
       64
     ],
-    "android.hardware.audio.core.sounddose-V3-ndk_aura": [
-      32,
-      64
-    ],
     "android.hardware.audio.effect-V2-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.audio.effect-V3-ndk_aura": [
       32,
       64
     ],
@@ -64,23 +32,7 @@
       32,
       64
     ],
-    "android.hardware.bluetooth.audio-V5-ndk_aura": [
-      32,
-      64
-    ],
     "android.hardware.bluetooth.audio-impl-mediatek": [
-      32,
-      64
-    ],
-    "android.hardware.common-V2-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.common.fmq-V1-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.graphics.allocator-V2-ndk_aura": [
       32,
       64
     ],
@@ -88,43 +40,11 @@
       32,
       64
     ],
-    "android.hardware.media.bufferpool2-V2-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.media.c2-V1-ndk_aura": [
-      32,
-      64
-    ],
     "android.hardware.sensors-V2-ndk_aura": [
       32,
       64
     ],
-    "android.hardware.sensors-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.hardware.soundtrigger3-V3-ndk_aura": [
-      32,
-      64
-    ],
     "android.media.audio.common.types-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.media.audio.common.types-V4-ndk_aura": [
-      32,
-      64
-    ],
-    "android.media.audio.eraser.types-V1-ndk_aura": [
-      32,
-      64
-    ],
-    "android.media.soundtrigger.types-V3-ndk_aura": [
-      32,
-      64
-    ],
-    "android.system.suspend-V1-ndk_aura": [
       32,
       64
     ],
@@ -1928,187 +1848,13 @@
     "APUWareUtilsAidlServer": [
       64
     ],
-    "android.frameworks.stats-V1-ndk_aura": [
-      64
-    ],
-    "android.frameworks.stats-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.biometrics.common-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.biometrics.fingerprint-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.bluetooth-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.bluetooth.finder-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.bluetooth.ranging-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.boot-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.camera.common-V1-ndk_aura": [
-      64
-    ],
     "android.hardware.camera.common-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.camera.device-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.camera.metadata-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.camera.provider-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.contexthub-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.drm-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.drm.common-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.gatekeeper-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.gnss-V5-ndk_aura": [
       64
     ],
     "android.hardware.graphics.common-V5-ndk_aura": [
       64
     ],
-    "android.hardware.graphics.composer3-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.graphics.composer3-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.graphics.composer3-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.health-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.health-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.ir-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.keymaster-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.light-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.light-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.memtrack-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.nfc-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.power-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.power-V6-ndk_aura": [
-      64
-    ],
     "android.hardware.power-service-mediatek": [
-      64
-    ],
-    "android.hardware.radio-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.config-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.data-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.ims-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.messaging-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.modem-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.network-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.sap-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.sim-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.radio.voice-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.secure_element-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.security.keymint-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.security.keymint-V4-ndk_aura": [
-      64
-    ],
-    "android.hardware.security.rkp-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.security.secureclock-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.security.sharedsecret-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.soundtrigger3-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.tetheroffload-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.usb-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.usb.gadget-V1-ndk_aura": [
-      64
-    ],
-    "android.hardware.vibrator-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.wifi-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.wifi.common-V2-ndk_aura": [
-      64
-    ],
-    "android.hardware.wifi.hostapd-V3-ndk_aura": [
-      64
-    ],
-    "android.hardware.wifi.supplicant-V4-ndk_aura": [
-      64
-    ],
-    "android.media.audio.common.types-V2-ndk_aura": [
-      64
-    ],
-    "android.media.soundtrigger.types-V1-ndk_aura": [
-      64
-    ],
-    "android.system.keystore2-V1-ndk_aura": [
       64
     ],
     "chremetrics-cpp_aura": [
@@ -5944,6 +5690,26 @@
       "reason": "SELinux compiled from the target source policy"
     },
     {
+      "path": "vendor/lib/android.frameworks.cameraservice.common-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.frameworks.cameraservice.device-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.frameworks.cameraservice.service-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.frameworks.sensorservice-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.audio.common-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hardware.audio.common-util.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5960,6 +5726,18 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib/android.hardware.audio.core-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.audio.core.sounddose-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.audio.effect-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hardware.audio.effect@6.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5968,11 +5746,27 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib/android.hardware.bluetooth.audio-V5-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hardware.bluetooth.audio@2.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
       "path": "vendor/lib/android.hardware.bluetooth.audio@2.1.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.common-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.common.fmq-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.graphics.allocator-V2-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6020,7 +5814,15 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib/android.hardware.media.bufferpool2-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hardware.media.bufferpool@2.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.hardware.media.c2-V1-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6044,6 +5846,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib/android.hardware.sensors-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hardware.sensors@1.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6060,6 +5866,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib/android.hardware.soundtrigger3-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib/android.hidl.memory.token@1.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6069,6 +5879,22 @@
     },
     {
       "path": "vendor/lib/android.hidl.safe_union@1.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.media.audio.common.types-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.media.audio.eraser.types-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.media.soundtrigger.types-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib/android.system.suspend-V1-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6584,6 +6410,34 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.frameworks.cameraservice.common-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.frameworks.cameraservice.device-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.frameworks.cameraservice.service-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.frameworks.sensorservice-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.frameworks.stats-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.frameworks.stats-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.audio.common-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.audio.common-util.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6600,11 +6454,27 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.audio.core-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.audio.core.sounddose-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.audio.effect-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.audio.effect@6.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
       "path": "vendor/lib64/android.hardware.audio@6.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.biometrics.common-V4-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6616,11 +6486,35 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.biometrics.fingerprint-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.bluetooth-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.bluetooth.audio-V5-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.bluetooth.audio@2.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
       "path": "vendor/lib64/android.hardware.bluetooth.audio@2.1.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.bluetooth.finder-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.bluetooth.ranging-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.boot-V1-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6632,7 +6526,15 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.camera.common-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.camera.common@1.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.camera.device-V3-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6660,6 +6562,14 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.camera.metadata-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.camera.provider-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.camera.provider@2.4.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6669,6 +6579,38 @@
     },
     {
       "path": "vendor/lib64/android.hardware.camera.provider@2.6.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.common-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.common.fmq-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.contexthub-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.drm-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.drm.common-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.gatekeeper-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.gnss-V5-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.graphics.allocator-V2-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6700,6 +6642,18 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.graphics.composer3-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.graphics.composer3-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.graphics.composer3-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.graphics.mapper@2.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6716,7 +6670,35 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.health-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.health-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.ir-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.keymaster-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.light-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.light-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.light@2.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.media.bufferpool2-V2-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6724,7 +6706,27 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.media.c2-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.memtrack-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.nfc-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.nfc@1.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.power-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.power-V6-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6740,6 +6742,46 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.radio-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.config-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.data-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.ims-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.messaging-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.modem-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.network-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.sap-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.sim-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.radio.voice-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hardware.radio@1.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6749,6 +6791,34 @@
     },
     {
       "path": "vendor/lib64/android.hardware.renderscript@1.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.secure_element-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.security.keymint-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.security.keymint-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.security.rkp-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.security.secureclock-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.sensors-V3-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -6768,6 +6838,46 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/lib64/android.hardware.soundtrigger3-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.soundtrigger3-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.tetheroffload-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.usb-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.usb.gadget-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.vibrator-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.wifi-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.wifi.common-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.hardware.wifi.supplicant-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/lib64/android.hidl.memory.token@1.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -6777,6 +6887,34 @@
     },
     {
       "path": "vendor/lib64/android.hidl.safe_union@1.0.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.media.audio.common.types-V2-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.media.audio.common.types-V4-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.media.audio.eraser.types-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.media.soundtrigger.types-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.media.soundtrigger.types-V3-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.system.keystore2-V1-ndk.so",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/lib64/android.system.suspend-V1-ndk.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -7419,146 +7557,20 @@
   "needed_fixups": {
     "vendor/bin/factory": [
       [
-        "android.hardware.health-V1-ndk.so",
-        "android.hardware.health-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.light-V1-ndk.so",
-        "android.hardware.light-V1-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
     "vendor/bin/hw/android.hardware.audio.service-aidl.mediatek": [
       [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.core.sounddose-V3-ndk.so",
-        "android.hardware.audio.core.sounddose-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.soundtrigger3-V3-ndk.so",
-        "android.hardware.soundtrigger3-V3-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
-    "vendor/bin/hw/android.hardware.biometrics.fingerprint-service": [
-      [
-        "android.hardware.biometrics.common-V4-ndk.so",
-        "android.hardware.biometrics.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.biometrics.fingerprint-V4-ndk.so",
-        "android.hardware.biometrics.fingerprint-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.bluetooth-service-mediatek": [
-      [
-        "android.hardware.bluetooth-V1-ndk.so",
-        "android.hardware.bluetooth-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.bluetooth.finder-service-mediatek": [
-      [
-        "android.hardware.bluetooth-V1-ndk.so",
-        "android.hardware.bluetooth-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.finder-V1-ndk.so",
-        "android.hardware.bluetooth.finder-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.bluetooth.ranging-service.mediatek": [
-      [
-        "android.hardware.bluetooth.ranging-V1-ndk.so",
-        "android.hardware.bluetooth.ranging-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.boot-service.mtk": [
-      [
-        "android.hardware.boot-V1-ndk.so",
-        "android.hardware.boot-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/bin/hw/android.hardware.contexthub-service.tinysys_aura": [
-      [
-        "android.frameworks.stats-V2-ndk.so",
-        "android.frameworks.stats-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.contexthub-V4-ndk.so",
-        "android.hardware.contexthub-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.soundtrigger3-V1-ndk.so",
-        "android.hardware.soundtrigger3-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.soundtrigger.types-V1-ndk.so",
-        "android.media.soundtrigger.types-V1-ndk_aura.so"
-      ],
       [
         "chremetrics-cpp.so",
         "chremetrics-cpp_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.drm-service.clearkey_aura": [
-      [
-        "android.hardware.drm-V1-ndk.so",
-        "android.hardware.drm-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.gatekeeper-service.beanpod": [
-      [
-        "android.hardware.gatekeeper-V1-ndk.so",
-        "android.hardware.gatekeeper-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.graphics.composer@3.2-service": [
-      [
-        "android.hardware.graphics.composer3-V2-ndk.so",
-        "android.hardware.graphics.composer3-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.graphics.composer@3.3-service": [
-      [
-        "android.hardware.graphics.composer3-V3-ndk.so",
-        "android.hardware.graphics.composer3-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.graphics.composer@3.4-service": [
-      [
-        "android.hardware.graphics.composer3-V4-ndk.so",
-        "android.hardware.graphics.composer3-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.health-service.example_aura": [
-      [
-        "android.hardware.health-V4-ndk.so",
-        "android.hardware.health-V4-ndk_aura.so"
       ]
     ],
     "vendor/bin/hw/android.hardware.identity-service.beanpod": [
@@ -7567,73 +7579,7 @@
         "libkeymaster_messages_aura.so"
       ]
     ],
-    "vendor/bin/hw/android.hardware.ir-service.example_aura": [
-      [
-        "android.hardware.ir-V1-ndk.so",
-        "android.hardware.ir-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.lights-service.mediatek": [
-      [
-        "android.hardware.light-V2-ndk.so",
-        "android.hardware.light-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.media.c2-mediatek": [
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.media.c2-mediatek-64b": [
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.memtrack-service.mediatek": [
-      [
-        "android.hardware.memtrack-V1-ndk.so",
-        "android.hardware.memtrack-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.nfc-service-tms": [
-      [
-        "android.hardware.nfc-V1-ndk.so",
-        "android.hardware.nfc-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek": [
-      [
-        "android.hardware.radio.modem-V4-ndk.so",
-        "android.hardware.radio.modem-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.sim-V4-ndk.so",
-        "android.hardware.radio.sim-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.secure_element-V1-ndk.so",
-        "android.hardware.secure_element-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/bin/hw/android.hardware.security.keymint@4.0-service.beanpod": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.rkp-V3-ndk.so",
-        "android.hardware.security.rkp-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.secureclock-V1-ndk.so",
-        "android.hardware.security.secureclock-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.sharedsecret-V1-ndk.so",
-        "android.hardware.security.sharedsecret-V1-ndk_aura.so"
-      ],
       [
         "lib_android_keymaster_keymint_utils.so",
         "lib_android_keymaster_keymint_utils_aura.so"
@@ -7647,83 +7593,13 @@
         "libkeymint_aura.so"
       ]
     ],
-    "vendor/bin/hw/android.hardware.sensors-service.multihal_aura": [
-      [
-        "android.hardware.sensors-V3-ndk.so",
-        "android.hardware.sensors-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.usb-aidl-service.mediatek": [
-      [
-        "android.hardware.usb-V3-ndk.so",
-        "android.hardware.usb-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.usb.gadget-aidl-service.mediatek": [
-      [
-        "android.frameworks.stats-V1-ndk.so",
-        "android.frameworks.stats-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.usb.gadget-V1-ndk.so",
-        "android.hardware.usb.gadget-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.vibrator-service.mediatek": [
-      [
-        "android.hardware.vibrator-V2-ndk.so",
-        "android.hardware.vibrator-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.wifi-service-lazy_aura": [
-      [
-        "android.hardware.wifi-V3-ndk.so",
-        "android.hardware.wifi-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/hostapd": [
-      [
-        "android.hardware.wifi.common-V2-ndk.so",
-        "android.hardware.wifi.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.wifi.hostapd-V3-ndk.so",
-        "android.hardware.wifi.hostapd-V3-ndk_aura.so"
-      ]
-    ],
     "vendor/bin/hw/mt6789/android.hardware.graphics.allocator-V2-service-mediatek.mt6789": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
-    "vendor/bin/hw/mt6789/camerahalserver": [
-      [
-        "android.hardware.camera.provider-V3-ndk.so",
-        "android.hardware.camera.provider-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/tetheroffloadservice": [
-      [
-        "android.hardware.tetheroffload-V1-ndk.so",
-        "android.hardware.tetheroffload-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek": [
-      [
-        "android.hardware.power-V6-ndk.so",
-        "android.hardware.power-V6-ndk_aura.so"
-      ]
-    ],
     "vendor/bin/hw/vendor.microtrust.hardware.widevine@1.0-service.beanpod": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
-      ],
       [
         "libkeymaster_portable.so",
         "libkeymaster_portable_aura.so"
@@ -7737,64 +7613,10 @@
         "libpuresoftkeymasterdevice_aura.so"
       ]
     ],
-    "vendor/bin/hw/wpa_supplicant_aura": [
-      [
-        "android.hardware.wifi.supplicant-V4-ndk.so",
-        "android.hardware.wifi.supplicant-V4-ndk_aura.so"
-      ],
-      [
-        "android.system.keystore2-V1-ndk.so",
-        "android.system.keystore2-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/bin/meta_tst": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
-      ]
-    ],
     "vendor/bin/mnld": [
-      [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
       [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.frameworks.cameraservice.device-V3-ndk_aura.so": [
-      [
-        "android.frameworks.cameraservice.common-V1-ndk.so",
-        "android.frameworks.cameraservice.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.frameworks.cameraservice.service-V3-ndk_aura.so": [
-      [
-        "android.frameworks.cameraservice.common-V1-ndk.so",
-        "android.frameworks.cameraservice.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.frameworks.cameraservice.device-V3-ndk.so",
-        "android.frameworks.cameraservice.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.frameworks.sensorservice-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.sensors-V3-ndk.so",
-        "android.hardware.sensors-V3-ndk_aura.so"
       ]
     ],
     "vendor/lib/android.hardware.audio.common-V3-ndk_aura.so": [
@@ -7803,72 +7625,10 @@
         "android.media.audio.common.types-V3-ndk_aura.so"
       ]
     ],
-    "vendor/lib/android.hardware.audio.common-V4-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.audio.core-V3-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.core.sounddose-V3-ndk.so",
-        "android.hardware.audio.core.sounddose-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/android.hardware.audio.core-impl-mediatek.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.core.sounddose-V3-ndk.so",
-        "android.hardware.audio.core.sounddose-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.audio.core.sounddose-V3-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
       ]
     ],
     "vendor/lib/android.hardware.audio.effect-V2-ndk_aura.so": [
@@ -7877,164 +7637,14 @@
         "android.hardware.audio.common-V3-ndk_aura.so"
       ],
       [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
         "android.media.audio.common.types-V3-ndk.so",
         "android.media.audio.common.types-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.audio.effect-V3-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.eraser.types-V1-ndk.so",
-        "android.media.audio.eraser.types-V1-ndk_aura.so"
       ]
     ],
     "vendor/lib/android.hardware.bluetooth.audio-V4-ndk_aura.so": [
       [
         "android.hardware.audio.common-V3-ndk.so",
         "android.hardware.audio.common-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.bluetooth.audio-V5-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.bluetooth.audio-impl-mediatek.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.common.fmq-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.graphics.allocator-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.graphics.common-V6-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.media.bufferpool2-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.media.c2-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.sensors-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.sensors-V3-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.hardware.soundtrigger3-V3-ndk_aura.so": [
-      [
-        "android.media.soundtrigger.types-V3-ndk.so",
-        "android.media.soundtrigger.types-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.media.audio.eraser.types-V1-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/android.media.soundtrigger.types-V3-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/egl/mt6789/libGLES_mali.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/hw/android.hardware.soundtrigger3-impl.so": [
-      [
-        "android.hardware.soundtrigger3-V3-ndk.so",
-        "android.hardware.soundtrigger3-V3-ndk_aura.so"
       ]
     ],
     "vendor/lib/hw/audio.primary.mediatek.so": [
@@ -8047,19 +7657,15 @@
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
       ],
       [
-        "libtinyxml2.so",
-        "libtinyxml2_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib/hw/mt6789/android.hardware.graphics.allocator-V2-mediatek.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
@@ -8073,10 +7679,6 @@
     ],
     "vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq_aidl-impl.so": [
       [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
-      [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
       ],
@@ -8085,113 +7687,19 @@
         "libtinyxml2_aura.so"
       ]
     ],
-    "vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/lib_power_applist.so": [
       [
         "libtinyxml2.so",
         "libtinyxml2_aura.so"
       ]
     ],
-    "vendor/lib/libaudioprimarydevicehalifclient.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_aidl_displayone.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_aidl_displaytwo.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_aidl_mtk.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_control_adapter1.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_control_adapter2.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libbluetooth_audio_session_control_adapter3.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/libcodec2_fsr.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
-    "vendor/lib/libcodec2_mtk_vdec.so": [
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/libcodec2_mtk_venc.so": [
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/libgpud.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
@@ -8249,33 +7757,7 @@
         "libaudioutils_aura.so"
       ]
     ],
-    "vendor/lib/mt6789/libpqconfig.so": [
-      [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.sensors-V3-ndk.so",
-        "android.hardware.sensors-V3-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/soundfx/libaecsw_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -8283,43 +7765,11 @@
     ],
     "vendor/lib/soundfx/libagc1sw_mtk.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
     "vendor/lib/soundfx/libagc2sw_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -8327,43 +7777,11 @@
     ],
     "vendor/lib/soundfx/libnssw_mtk.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
     "vendor/lib/soundfx/libpreprocessingaidl_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -8377,128 +7795,14 @@
     ],
     "vendor/lib/soundfx/libspatializeraidl.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
-    "vendor/lib/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.composer_ext-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.mmagent-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.mmlpq-V3-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.mmlpq-V5-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.mms-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.neuropilot.agent-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
     "vendor/lib/vendor.mediatek.hardware.pq_aidl-V7-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib/vendor.mediatek.hardware.videotelephony-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.frameworks.cameraservice.device-V3-ndk_aura.so": [
-      [
-        "android.frameworks.cameraservice.common-V1-ndk.so",
-        "android.frameworks.cameraservice.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.frameworks.cameraservice.service-V3-ndk_aura.so": [
-      [
-        "android.frameworks.cameraservice.common-V1-ndk.so",
-        "android.frameworks.cameraservice.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.frameworks.cameraservice.device-V3-ndk.so",
-        "android.frameworks.cameraservice.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.frameworks.sensorservice-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.sensors-V3-ndk.so",
-        "android.hardware.sensors-V3-ndk_aura.so"
       ]
     ],
     "vendor/lib64/android.hardware.audio.common-V3-ndk_aura.so": [
@@ -8507,72 +7811,10 @@
         "android.media.audio.common.types-V3-ndk_aura.so"
       ]
     ],
-    "vendor/lib64/android.hardware.audio.common-V4-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.audio.core-V3-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.core.sounddose-V3-ndk.so",
-        "android.hardware.audio.core.sounddose-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
     "vendor/lib64/android.hardware.audio.core-impl-mediatek.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.audio.core.sounddose-V3-ndk.so",
-        "android.hardware.audio.core.sounddose-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.audio.core.sounddose-V3-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
       ]
     ],
     "vendor/lib64/android.hardware.audio.effect-V2-ndk_aura.so": [
@@ -8581,422 +7823,24 @@
         "android.hardware.audio.common-V3-ndk_aura.so"
       ],
       [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
         "android.media.audio.common.types-V3-ndk.so",
         "android.media.audio.common.types-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.audio.effect-V3-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.eraser.types-V1-ndk.so",
-        "android.media.audio.eraser.types-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.biometrics.fingerprint-V4-ndk_aura.so": [
-      [
-        "android.hardware.biometrics.common-V4-ndk.so",
-        "android.hardware.biometrics.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.keymaster-V4-ndk.so",
-        "android.hardware.keymaster-V4-ndk_aura.so"
       ]
     ],
     "vendor/lib64/android.hardware.bluetooth.audio-V4-ndk_aura.so": [
       [
         "android.hardware.audio.common-V3-ndk.so",
         "android.hardware.audio.common-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.bluetooth.audio-V5-ndk_aura.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.camera.device-V3-ndk_aura.so": [
-      [
-        "android.hardware.camera.common-V1-ndk.so",
-        "android.hardware.camera.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.camera.metadata-V3-ndk.so",
-        "android.hardware.camera.metadata-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.camera.provider-V3-ndk_aura.so": [
-      [
-        "android.hardware.camera.common-V1-ndk.so",
-        "android.hardware.camera.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.camera.device-V3-ndk.so",
-        "android.hardware.camera.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.common.fmq-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.drm-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.drm.common-V1-ndk.so",
-        "android.hardware.drm.common-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.gatekeeper-V1-ndk_aura.so": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.allocator-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.common-V5-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.common-V6-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.composer3-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.composer3-V3-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.graphics.composer3-V4-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.drm.common-V1-ndk.so",
-        "android.hardware.drm.common-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.common-V6-ndk.so",
-        "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.media.bufferpool2-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.media.c2-V1-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.power-V6-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.power-service-mediatek.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.health-V1-ndk.so",
-        "android.hardware.health-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.power-V6-ndk.so",
-        "android.hardware.power-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.config-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.data-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.ims-V3-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.messaging-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.modem-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.network-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.sim-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.config-V4-ndk.so",
-        "android.hardware.radio.config-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.radio.voice-V4-ndk_aura.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.security.keymint-V1-ndk_aura.so": [
-      [
-        "android.hardware.security.secureclock-V1-ndk.so",
-        "android.hardware.security.secureclock-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.security.keymint-V4-ndk_aura.so": [
-      [
-        "android.hardware.security.secureclock-V1-ndk.so",
-        "android.hardware.security.secureclock-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.sensors-V2-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.sensors-V3-ndk_aura.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.soundtrigger3-V1-ndk_aura.so": [
-      [
-        "android.media.soundtrigger.types-V1-ndk.so",
-        "android.media.soundtrigger.types-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.soundtrigger3-V3-ndk_aura.so": [
-      [
-        "android.media.soundtrigger.types-V3-ndk.so",
-        "android.media.soundtrigger.types-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.wifi-V3-ndk_aura.so": [
-      [
-        "android.hardware.wifi.common-V2-ndk.so",
-        "android.hardware.wifi.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.wifi.hostapd-V3-ndk_aura.so": [
-      [
-        "android.hardware.wifi.common-V2-ndk.so",
-        "android.hardware.wifi.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.hardware.wifi.supplicant-V4-ndk_aura.so": [
-      [
-        "android.hardware.wifi.common-V2-ndk.so",
-        "android.hardware.wifi.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.media.audio.eraser.types-V1-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.media.soundtrigger.types-V1-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V2-ndk.so",
-        "android.media.audio.common.types-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.media.soundtrigger.types-V3-ndk_aura.so": [
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/android.system.keystore2-V1-ndk_aura.so": [
-      [
-        "android.hardware.security.keymint-V1-ndk.so",
-        "android.hardware.security.keymint-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/egl/mt6789/libGLES_mali.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
       ]
     ],
     "vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
+        "libaudioutils.so",
+        "libaudioutils_aura.so"
       ],
       [
         "libtinyxml2.so",
         "libtinyxml2_aura.so"
-      ],
-      [
-        "libaudioutils.so",
-        "libaudioutils_aura.so"
-      ]
-    ],
-    "vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so": [
-      [
-        "android.hardware.gnss-V5-ndk.so",
-        "android.hardware.gnss-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/hw/android.hardware.soundtrigger3-impl.so": [
-      [
-        "android.hardware.soundtrigger3-V3-ndk.so",
-        "android.hardware.soundtrigger3-V3-ndk_aura.so"
       ]
     ],
     "vendor/lib64/hw/audio.primary.mediatek.so": [
@@ -9009,26 +7853,18 @@
         "android.hardware.bluetooth.audio-V4-ndk_aura.so"
       ],
       [
-        "libtinyxml2.so",
-        "libtinyxml2_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
+      ],
+      [
+        "libtinyxml2.so",
+        "libtinyxml2_aura.so"
       ]
     ],
     "vendor/lib64/hw/hwcomposer.mtk_common.so": [
       [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
-      [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
-      ],
-      [
-        "android.hardware.graphics.composer3-V4-ndk.so",
-        "android.hardware.graphics.composer3-V4-ndk_aura.so"
       ],
       [
         "libtinyxml2.so",
@@ -9036,10 +7872,6 @@
       ]
     ],
     "vendor/lib64/hw/mt6789/android.hardware.graphics.allocator-V2-mediatek.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
@@ -9053,40 +7885,12 @@
     ],
     "vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq_aidl-impl.so": [
       [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
-      [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
       ],
       [
         "libtinyxml2.so",
         "libtinyxml2_aura.so"
-      ]
-    ],
-    "vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/hw/vendor.mediatek.hardware.camera.postproc_aidl@1.0-impl.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/lib_android_keymaster_keymint_utils_aura.so": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
       ]
     ],
     "vendor/lib64/lib_power_applist.so": [
@@ -9097,107 +7901,17 @@
     ],
     "vendor/lib64/libaimemc.so": [
       [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
-      [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
-      ],
-      [
-        "android.hardware.power-V4-ndk.so",
-        "android.hardware.power-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libaudioprimarydevicehalifclient.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_aidl_displayone.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_aidl_displaytwo.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_aidl_mtk.so": [
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_control_adapter1.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_control_adapter2.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libbluetooth_audio_session_control_adapter3.so": [
-      [
-        "android.hardware.audio.core-V3-ndk.so",
-        "android.hardware.audio.core-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.bluetooth.audio-V5-ndk.so",
-        "android.hardware.bluetooth.audio-V5-ndk_aura.so"
       ]
     ],
     "vendor/lib64/libcodec2_fsr.so": [
       [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
-      [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
-    "vendor/lib64/libcodec2_mtk_vdec.so": [
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/libcodec2_mtk_venc.so": [
-      [
-        "android.hardware.media.bufferpool2-V2-ndk.so",
-        "android.hardware.media.bufferpool2-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.media.c2-V1-ndk.so",
-        "android.hardware.media.c2-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
@@ -9205,47 +7919,17 @@
     ],
     "vendor/lib64/libcodec2_vpp_AISR_plugin.so": [
       [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
-      [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
-    "vendor/lib64/libcsalgo.so": [
-      [
-        "android.hardware.bluetooth.ranging-V1-ndk.so",
-        "android.hardware.bluetooth.ranging-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/lib64/libgpud.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
       ]
     ],
     "vendor/lib64/libkeymint_aura.so": [
-      [
-        "android.hardware.security.keymint-V4-ndk.so",
-        "android.hardware.security.keymint-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.rkp-V3-ndk.so",
-        "android.hardware.security.rkp-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.secureclock-V1-ndk.so",
-        "android.hardware.security.secureclock-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.security.sharedsecret-V1-ndk.so",
-        "android.hardware.security.sharedsecret-V1-ndk_aura.so"
-      ],
       [
         "lib_android_keymaster_keymint_utils.so",
         "lib_android_keymaster_keymint_utils_aura.so"
@@ -9313,44 +7997,6 @@
         "libkeymaster_portable_aura.so"
       ]
     ],
-    "vendor/lib64/librilfusion.so": [
-      [
-        "android.hardware.radio.config-V4-ndk.so",
-        "android.hardware.radio.config-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.data-V4-ndk.so",
-        "android.hardware.radio.data-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.ims-V3-ndk.so",
-        "android.hardware.radio.ims-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.messaging-V4-ndk.so",
-        "android.hardware.radio.messaging-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.modem-V4-ndk.so",
-        "android.hardware.radio.modem-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.network-V4-ndk.so",
-        "android.hardware.radio.network-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.sap-V1-ndk.so",
-        "android.hardware.radio.sap-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.sim-V4-ndk.so",
-        "android.hardware.radio.sim-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.voice-V4-ndk.so",
-        "android.hardware.radio.voice-V4-ndk_aura.so"
-      ]
-    ],
     "vendor/lib64/librt_extamp_intf.so": [
       [
         "libtinyxml2.so",
@@ -9371,19 +8017,11 @@
     ],
     "vendor/lib64/mt6789/libcam.utils.sensorprovider.so": [
       [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
-      [
         "android.hardware.sensors-V2-ndk.so",
         "android.hardware.sensors-V2-ndk_aura.so"
       ]
     ],
     "vendor/lib64/mt6789/libmtkcam_grallocutils.so": [
-      [
-        "android.hardware.graphics.allocator-V2-ndk.so",
-        "android.hardware.graphics.allocator-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V5-ndk.so",
         "android.hardware.graphics.common-V5-ndk_aura.so"
@@ -9393,57 +8031,9 @@
       [
         "android.hardware.camera.common-V2-ndk.so",
         "android.hardware.camera.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.camera.device-V3-ndk.so",
-        "android.hardware.camera.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/mt6789/libmtkcam_hal_aidl_device.so": [
-      [
-        "android.hardware.camera.device-V3-ndk.so",
-        "android.hardware.camera.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/mt6789/libmtkcam_hal_aidl_provider.so": [
-      [
-        "android.hardware.camera.provider-V3-ndk.so",
-        "android.hardware.camera.provider-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/mt6789/libmtkcam_hal_aidl_utils.so": [
-      [
-        "android.hardware.camera.device-V3-ndk.so",
-        "android.hardware.camera.device-V3-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/mt6789/libpqconfig.so": [
-      [
-        "android.frameworks.sensorservice-V1-ndk.so",
-        "android.frameworks.sensorservice-V1-ndk_aura.so"
-      ],
-      [
-        "android.hardware.sensors-V3-ndk.so",
-        "android.hardware.sensors-V3-ndk_aura.so"
       ]
     ],
     "vendor/lib64/soundfx/libaecsw_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -9451,43 +8041,11 @@
     ],
     "vendor/lib64/soundfx/libagc1sw_mtk.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
     "vendor/lib64/soundfx/libagc2sw_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -9495,43 +8053,11 @@
     ],
     "vendor/lib64/soundfx/libnssw_mtk.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
     "vendor/lib64/soundfx/libpreprocessingaidl_mtk.so": [
-      [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
@@ -9545,290 +8071,20 @@
     ],
     "vendor/lib64/soundfx/libspatializeraidl.so": [
       [
-        "android.hardware.audio.effect-V3-ndk.so",
-        "android.hardware.audio.effect-V3-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ],
-      [
-        "android.media.audio.common.types-V4-ndk.so",
-        "android.media.audio.common.types-V4-ndk_aura.so"
-      ],
-      [
         "libaudioutils.so",
         "libaudioutils_aura.so"
       ]
     ],
-    "vendor/lib64/vendor.mediatek.hardware.aee-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.apuware.aiste-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.apuware.apusys-V5-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so": [
-      [
-        "android.hardware.audio.common-V4-ndk.so",
-        "android.hardware.audio.common-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
     "vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
       [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.camera.postproc-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mmlpq-V5-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mms-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V2-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V4-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.cap-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.data-V3-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.data-V4-ndk.so",
-        "android.hardware.radio.data-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.dch-V2-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.em-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.modem-V4-ndk.so",
-        "android.hardware.radio.modem-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.ims-V3-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.messaging-V4-ndk.so",
-        "android.hardware.radio.messaging-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.voice-V4-ndk.so",
-        "android.hardware.radio.voice-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.messaging-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.modem-V5-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.mwi-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.network-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.network-V4-ndk.so",
-        "android.hardware.radio.network-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.ntn-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.rcs-V2-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V2-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so": [
-      [
-        "android.hardware.radio-V4-ndk.so",
-        "android.hardware.radio-V4-ndk_aura.so"
-      ],
-      [
-        "android.hardware.radio.network-V4-ndk.so",
-        "android.hardware.radio.network-V4-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.neuropilot.agent-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.neuropilot.neuronservice-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
       ]
     ],
     "vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so": [
       [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
         "android.hardware.graphics.common-V6-ndk.so",
         "android.hardware.graphics.common-V6-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so": [
-      [
-        "android.hardware.common-V2-ndk.so",
-        "android.hardware.common-V2-ndk_aura.so"
-      ],
-      [
-        "android.hardware.common.fmq-V1-ndk.so",
-        "android.hardware.common.fmq-V1-ndk_aura.so"
-      ]
-    ],
-    "vendor/lib64/vendor.microtrust.hardware.widevine-V1-ndk.so": [
-      [
-        "android.hardware.security.rkp-V3-ndk.so",
-        "android.hardware.security.rkp-V3-ndk_aura.so"
       ]
     ]
   },

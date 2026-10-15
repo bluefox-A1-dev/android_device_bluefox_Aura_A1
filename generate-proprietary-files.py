@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
 # SPDX-FileCopyrightText: 2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
-"""Inventory a complete Aura stock dump into pinned, file-level extract-utils lists."""
+"""Inventory a complete Aura stock dump into file-level extract-utils lists."""
 import argparse
 from collections import defaultdict
-import hashlib
 import json
 from pathlib import Path
 import re
 import subprocess
-
-
-def sha1(p):
-    with p.open('rb') as f:
-        return hashlib.file_digest(f, 'sha1').hexdigest()
 
 
 def generated_vendor_file(relative):
@@ -128,21 +122,21 @@ def main():
             changes = [['/vendor/'+old,'/vendor/'+new] for old,new in renamed.items() if '/vendor/'+old in body]
             if changes: text_fixups[destination] = changes
         entry_path = source_path+':'+destination if source_path != destination else destination
-        line = entry_path + ''.join(';'+f for f in flags) + '|'+sha1(item)
+        line = entry_path + ''.join(';'+f for f in flags)
         sections[section].append(line)
     for partition in ('system_dlkm','vendor_dlkm','odm_dlkm'):
         for item in sorted((a.dump/partition).rglob('*')):
             if not item.is_file() or item.is_symlink():continue
             if item.name=='build.prop' or item.name.startswith('NOTICE'):continue
             # The Android module rules install KO/depmod output; keep source metadata for audit.
-            sections['Kernel modules - '+partition].append(f'{partition}/{item.relative_to(a.dump/partition)};EXTRACT_ONLY|{sha1(item)}')
+            sections['Kernel modules - '+partition].append(f'{partition}/{item.relative_to(a.dump/partition)};EXTRACT_ONLY')
     modules = a.dump/'vendor_boot/vendor_ramdisk00-root/lib/modules'
     for item in sorted(modules.iterdir()):
         if item.is_file():
-            sections['Kernel modules - ramdisk'].append(f'prebuilt/ramdisk/modules/{item.name};EXTRACT_ONLY|{sha1(item)}')
+            sections['Kernel modules - ramdisk'].append(f'prebuilt/ramdisk/modules/{item.name};EXTRACT_ONLY')
     for name,src in [('Image.lz4','boot/kernel'),('dtb.img','vendor_boot/dtb'),('dtbo.img','dtbo.img')]:
         dst = ':prebuilt/kernel/dtb/mt6789.dtb' if name=='dtb.img' else ''
-        sections['Kernel and device trees'].append(f'prebuilt/kernel/{name}{dst};EXTRACT_ONLY|{sha1(a.dump/src)}')
+        sections['Kernel and device trees'].append(f'prebuilt/kernel/{name}{dst};EXTRACT_ONLY')
     text = '# Stock BLUEFOX_J583_A8_Aura_A1_CN_V1.0.3_20260930\n'
     for name,entries in sections.items():
         text += '\n# '+name+'\n'+'\n'.join(entries)+'\n'

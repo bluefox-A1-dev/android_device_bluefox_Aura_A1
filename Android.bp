@@ -6,6 +6,12 @@
 soong_namespace {
 }
 
+sh_binary_host {
+    name: "aura_a1_mkbootimg",
+    src: "tools/aura_a1_mkbootimg.py",
+    required: ["mkbootimg"],
+}
+
 prebuilt_etc {
     name: "init.Aura_A1.adb.rc",
     src: "rootdir/etc/init.Aura_A1.adb.rc",

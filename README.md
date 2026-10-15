@@ -48,3 +48,48 @@ then rerun extraction from the prepared staging directory. Source-provided
 paths are excluded by `configs/source-provided.json`; private ABI exceptions
 have priority over that list. Extraction fixes SONAME and DT_NEEDED only for
 these exceptions and retains ELF verification.
+
+## Boot image packaging and OTA
+
+Aura A1 requires header v4 with a zero OS version/patch field in boot and
+init_boot. Real OS/SPL values remain in AVB properties. `BOARD_CUSTOM_MKBOOTIMG`
+selects `aura_a1_mkbootimg`, which calls the stock tool with final zero-value
+arguments for v4 boot-format outputs, before AVB signing. Vendor-boot-only
+outputs and older header formats pass through unchanged. The stock tool is a
+required host dependency. No build/make patch is needed.
+
+Normal Make image and target-files builds select the wrapper automatically.
+For standalone signing, rebuilding images, and generating OTAs, use the device
+entry point for **each** operation (Aura A1 target-files only):
+
+```sh
+python3 device/bluefox/Aura_A1/tools/run-releasetool.py \
+    --host-tools out/host/linux-x86 \
+    sign_target_files_apks -o -d /path/to/keys input-target_files.zip signed-target_files.zip
+python3 device/bluefox/Aura_A1/tools/run-releasetool.py \
+    --host-tools out/host/linux-x86 \
+    ota_from_target_files signed-target_files.zip ota.zip
+```
+
+`--host-tools` can also point to an extracted otatools directory containing
+`bin/`. Keep both Python scripts together when copying them to a release host;
+Python 3 is required. The entry point sets `MKBOOTIMG` and selects the stock
+tool from that host directory. Running stock releasetools directly bypasses
+this policy when images are rebuilt. Existing images reused from target-files
+are not rewritten: start with correctly built images and check final artifacts.
+
+Before flashing or release, check that final boot/init_boot headers are v4
+with OS version/patch field zero and verify the AVB chain. These packaging
+checks do not replace an on-device OTA test.
+
+Host regression check (after building `mkbootimg`, `mkbootfs` and `avbtool`):
+
+```sh
+python3 device/bluefox/Aura_A1/tools/test-boot-packaging.py --lineage "$PWD"
+```
+
+Run this with the original platform-last releasetools implementation. It
+checks real temporary boot/init_boot/recovery images, AVB properties and
+hashes, legacy/vendor output passthrough, and the standalone environment.
+The unwrapped control must reproduce the nonzero header to demonstrate that
+the device wrapper replaces the former build/make ordering patch.

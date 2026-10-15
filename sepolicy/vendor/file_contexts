@@ -17,3 +17,13 @@
 /vendor/bin/hw/android\.hardware\.sensors\-service\.multihal_aura u:object_r:hal_sensors_default_exec:s0
 /vendor/bin/hw/android\.hardware\.wifi\-service\-lazy_aura u:object_r:hal_wifi_default_exec:s0
 /vendor/bin/hw/wpa_supplicant_aura u:object_r:hal_wifi_supplicant_default_exec:s0
+/vendor/bin/hw/android\.hardware\.boot-service\.mtk u:object_r:hal_bootctl_default_exec:s0
+/vendor/bin/hw/android\.hardware\.bluetooth-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
+/vendor/bin/hw/android\.hardware\.identity-service\.beanpod u:object_r:hal_identity_default_exec:s0
+/vendor/bin/hw/android\.hardware\.usb-aidl-service\.mediatek u:object_r:mtk_hal_usb_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\.gadget-aidl-service\.mediatek u:object_r:mtk_hal_usb_exec:s0
+/vendor/bin/mt6789/v3avpud-64b\.mt6789 u:object_r:vpud_native_exec:s0
+/vendor/lib(64)?/mt6789/libmtk_mali_user\.so u:object_r:same_process_hal_file:s0
+/vendor/lib64/android\.hardware\.graphics\.common-V6-ndk_aura\.so u:object_r:same_process_hal_file:s0
+/vendor/lib64/vendor\.mediatek\.hardware\.graphics-V1-ndk\.so u:object_r:same_process_hal_file:s0
+/dev/tms_nfc u:object_r:nfc_device:s0

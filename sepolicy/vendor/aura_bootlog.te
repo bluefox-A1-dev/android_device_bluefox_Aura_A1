@@ -14,7 +14,7 @@ userdebug_or_eng(`
     allow aura_bootlog kmsg_device:chr_file r_file_perms;
     allow aura_bootlog proc:dir r_dir_perms;
     allow aura_bootlog proc_random:file r_file_perms;
-    allow aura_bootlog metadata_file:dir search;
+    allow aura_bootlog metadata_file:dir r_dir_perms;
     allow aura_bootlog fs_type:filesystem getattr;
     allow aura_bootlog aura_bootlog_file:dir create_dir_perms;
     allow aura_bootlog aura_bootlog_file:file create_file_perms;

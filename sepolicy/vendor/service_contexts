@@ -1,0 +1,2 @@
+vendor.tms.tmsnfc_aidl.ITmsNfc/default u:object_r:hal_nfc_service:s0
+vendor.mediatek.hardware.nwk_opt_new.INwkOptNew/default u:object_r:vendor_aura_nwk_opt_service:s0

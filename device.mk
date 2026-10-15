@@ -18,6 +18,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Audio effects loaded by the stock AIDL factory.
+PRODUCT_PACKAGES += \
+    libbundleaidl \
+    libdownmixaidl \
+    libdynamicsprocessingaidl \
+    liberasersw \
+    libextensioneffect \
+    libhapticgeneratoraidl \
+    libloudnessenhanceraidl \
+    libreverbaidl \
+    libvisualizeraidl
+
 # Debug
 ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
 WITH_ADB_INSECURE := true

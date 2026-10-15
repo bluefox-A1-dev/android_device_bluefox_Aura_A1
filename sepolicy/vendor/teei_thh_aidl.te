@@ -1,0 +1,5 @@
+# Common MTK policy covers the older HIDL THH service. Stock uses AIDL.
+type teei_hal_thh_service, service_manager_type, hal_service_type, protected_service;
+hal_attribute_service(hal_teei_thh, teei_hal_thh_service)
+binder_use(teei_hal_thh)
+binder_use(init_thh_service)

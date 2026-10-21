@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Stock Face HAL consumes a 640x480 NV21 file supplied by its enrollment UI. -->
+    <string name="config_face_enroll" translatable="false">org.lineageos.aura.faceenroll/.FaceEnrollActivity</string>
+</resources>

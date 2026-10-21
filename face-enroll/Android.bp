@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: Apache-2.0
+android_app {
+    name: "AuraFaceEnroll",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    optimize: { enabled: false },
+    required: ["init.Aura_A1.face-enroll.rc"],
+}
+
+prebuilt_etc {
+    name: "init.Aura_A1.face-enroll.rc",
+    src: "init.Aura_A1.face-enroll.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    system_ext_specific: true,
+}

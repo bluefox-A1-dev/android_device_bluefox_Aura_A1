@@ -57,7 +57,11 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.js
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayAuraA1
+    FrameworksResOverlayAuraA1 \
+    SettingsOverlayAuraA1
+
+# Stock face enrollment needs an NV21 file producer.
+PRODUCT_PACKAGES += AuraFaceEnroll
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 

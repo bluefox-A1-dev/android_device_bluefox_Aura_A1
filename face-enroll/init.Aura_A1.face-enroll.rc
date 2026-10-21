@@ -1,0 +1,4 @@
+# Relabel the existing owner-user handoff file on upgrade. Newly created files
+# receive this label via the HAL's filename-specific type_transition.
+on post-fs-data
+    restorecon /data/vendor_de/0/facedata/faceIdEnroll.yuv

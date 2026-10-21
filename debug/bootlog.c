@@ -19,16 +19,52 @@
 #define LOG_DIR "aura-bootlogs"
 #define RESERVE_BYTES (16ULL * 1024 * 1024)
 #define BUFFER_SIZE (1024 * 1024)
-#define KMSG_LIMIT (2 * 1024 * 1024)
-#define INIT_LIMIT (512 * 1024)
+#define KMSG_LIMIT (512 * 1024)
+#define INIT_LIMIT (128 * 1024)
 #define STATUS_LIMIT (64 * 1024)
+#define DENIAL_LIMIT (256 * 1024)
+#define DEDUP_SLOTS 512
+#define SIGNATURE_SIZE 2048
 
 /* Separate files for the bootstrap and managed daemon; keep one previous boot
- * and one within-boot rotation. Maximum log content is below 21 MiB. */
+ * and one within-boot rotation. Native logs are capped at 6.5 MiB, plus
+ * approximately 1 MiB for logcat. Keep 16 MiB free for metadata users. */
 static const char *files[] = {"early-kmsg.log", "early-init.log", "kmsg.log", "init.log",
-                              "early-status.log", "status.log"};
+                              "early-status.log", "status.log", "denials.log"};
+static const size_t limits[] = {KMSG_LIMIT, INIT_LIMIT, KMSG_LIMIT, INIT_LIMIT,
+                                STATUS_LIMIT, STATUS_LIMIT, DENIAL_LIMIT};
+static char signatures[DEDUP_SLOTS][SIGNATURE_SIZE];
+static size_t next_signature;
+static unsigned long long denial_unique, denial_duplicates;
 static char pending[BUFFER_SIZE];
 static char record[65537];
+
+/* Ignore audit timestamps/sequence numbers and volatile pid/ino fields, but
+ * preserve the denied operation, contexts, path/name, class and ioctl command.
+ * A bounded FIFO cache avoids unbounded RAM use. Evicted entries can reappear. */
+static int duplicate_denial(const char *avc) {
+    char key[SIGNATURE_SIZE];
+    size_t used = 0;
+    for (const char *p = avc; *p;) {
+        if ((p == avc || p[-1] == ' ') &&
+            (!strncmp(p, "pid=", 4) || !strncmp(p, "ino=", 4))) {
+            p += 4;
+            while (*p >= '0' && *p <= '9') ++p;
+            continue;
+        }
+        /* Never collapse distinct oversized messages on a truncated key. */
+        if (used + 1 >= sizeof(key)) { ++denial_unique; return 0; }
+        key[used++] = *p++;
+    }
+    key[used] = 0;
+    for (size_t i = 0; i < DEDUP_SLOTS; ++i) {
+        if (!strcmp(signatures[i], key)) { ++denial_duplicates; return 1; }
+    }
+    memcpy(signatures[next_signature], key, used + 1);
+    next_signature = (next_signature + 1) % DEDUP_SLOTS;
+    ++denial_unique;
+    return 0;
+}
 
 static int write_all(int fd, const void *data, size_t len) {
     const char *p = data;
@@ -87,7 +123,6 @@ static int enough_space(int fd) {
 }
 
 static int log_directory(int meta, const char *id) {
-    if (!enough_space(meta)) { errno = ENOSPC; return -1; }
     if (mkdirat(meta, LOG_DIR, 0700) && errno != EEXIST) return -1;
     int dir = openat(meta, LOG_DIR, O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC);
     if (dir < 0) return -1;
@@ -95,6 +130,28 @@ static int log_directory(int meta, const char *id) {
     if (lock < 0 || flock(lock, LOCK_EX)) {
         if (lock >= 0) close(lock);
         close(dir);
+        return -1;
+    }
+    /* Also shrink files left by older builds with larger limits. Keep the
+     * beginning of those logs, which contains the first boot failures. */
+    const char *suffixes[] = {"", ".1", ".prev", ".1.prev"};
+    for (size_t i = 0; i < sizeof(files) / sizeof(files[0]); ++i) {
+        for (size_t j = 0; j < sizeof(suffixes) / sizeof(suffixes[0]); ++j) {
+            char name[80];
+            snprintf(name, sizeof(name), "%s%s", files[i], suffixes[j]);
+            int fd = openat(dir, name, O_WRONLY | O_NOFOLLOW | O_CLOEXEC);
+            if (fd < 0) continue;
+            struct stat st;
+            int rc = fstat(fd, &st);
+            if (!rc && st.st_size > (off_t)limits[i]) rc = ftruncate(fd, limits[i]);
+            close(fd);
+            if (rc) { close(lock); close(dir); return -1; }
+        }
+    }
+    if (!enough_space(meta)) {
+        close(lock);
+        close(dir);
+        errno = ENOSPC;
         return -1;
     }
     char previous[80] = {0};
@@ -151,6 +208,13 @@ static int append_record(int dir, const char *name, const char *data, size_t len
 }
 
 static int save_record(int dir, int early, const char *record, size_t len) {
+    const char *avc = strstr(record, "avc:");
+    if (!early && avc && strstr(avc, "denied")) {
+        /* Deduplicate before writing the full kernel stream as well, so an
+         * AVC storm cannot evict unrelated messages from kmsg.log. */
+        if (duplicate_denial(avc)) return 0;
+        if (append_record(dir, "denials.log", record, len, DENIAL_LIMIT)) return -1;
+    }
     if (append_record(dir, files[early ? 0 : 2], record, len, KMSG_LIMIT)) return -1;
     if (strstr(record, "init:") || strstr(record, "init first stage") ||
         strstr(record, "scontext=u:r:init")) {
@@ -255,8 +319,9 @@ static int collect(int early) {
             if (fsync(dir)) {
                 reason = "sync-directory"; exit_error = errno; goto done;
             }
-            if (status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
-                               (long)last_status, records, bytes, overruns, dropped, open_error)) {
+            if (status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_unique=%llu denial_duplicates=%llu\n",
+                               (long)last_status, records, bytes, overruns, dropped, open_error,
+                               denial_unique, denial_duplicates)) {
                 reason = "write-status"; exit_error = errno; goto done;
             }
         }
@@ -294,9 +359,10 @@ static int collect(int early) {
 done:
     clock_gettime(CLOCK_MONOTONIC, &now);
     status_message(status >= 0 ? status : STDERR_FILENO,
-            "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d\n",
+            "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_unique=%llu denial_duplicates=%llu\n",
             reason, exit_error, exit_error ? strerror(exit_error) : "none",
-            (long)(now.tv_sec - start.tv_sec), records, bytes, buffered, overruns, dropped, open_error);
+            (long)(now.tv_sec - start.tv_sec), records, bytes, buffered, overruns, dropped, open_error,
+            denial_unique, denial_duplicates);
     if (dir >= 0) fsync(dir);
     if (status >= 0) close(status);
     if (dir >= 0) close(dir);

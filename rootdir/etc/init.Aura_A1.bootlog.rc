@@ -27,7 +27,9 @@ on post-fs
     write /dev/kmsg "aura-keymint: os=${ro.build.version.release:-unknown} system_spl=${ro.build.version.security_patch:-unknown} vendor_spl=${ro.vendor.build.security_patch:-unknown} boot_spl=${ro.bootimage.build.version.security_patch:-unknown} vbstate=${ro.boot.verifiedbootstate:-unknown}"
     start aura-logcat
     start aura-bootlog
+    start logd-auditctl
 
+# Keep collecting after boot completion for interactive hardware testing.
 on property:sys.boot_completed=1
-    stop aura-bootlog
-    stop aura-logcat
+    # Override an older persisted rate as well as the logd default.
+    setprop persist.logd.audit.rate 0

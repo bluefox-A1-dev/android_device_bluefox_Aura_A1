@@ -35,6 +35,7 @@ ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
 WITH_ADB_INSECURE := true
 PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=adb
 PRODUCT_SYSTEM_EXT_PROPERTIES += service.adb.root=1
+PRODUCT_SYSTEM_EXT_PROPERTIES += persist.logd.audit.rate=0
 
 PRODUCT_PACKAGES += \
     aura_bootlog \

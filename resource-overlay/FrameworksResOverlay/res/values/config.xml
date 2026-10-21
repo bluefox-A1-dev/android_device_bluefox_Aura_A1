@@ -5,4 +5,9 @@
     <bool name="config_intrusiveNotificationLed">false</bool>
     <!-- This phone uses on-screen navigation, with no Q25 keyboard overlay. -->
     <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Replace the stock vendor overlay's 61 Hz defaults for the 60/90 Hz panel.
+         Use the peak setting as the default, allowing users to select either mode. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultPeakRefreshRate">90</integer>
 </resources>

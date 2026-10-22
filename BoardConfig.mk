@@ -158,11 +158,6 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
-# Temporary AVC collection while bringing up enforcing policy.
-ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
-endif
-
 # Shipping API Level
 BOARD_SHIPPING_API_LEVEL := 31
 

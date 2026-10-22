@@ -23,8 +23,6 @@
 #define INIT_LIMIT (128 * 1024)
 #define STATUS_LIMIT (64 * 1024)
 #define DENIAL_LIMIT (256 * 1024)
-#define DEDUP_SLOTS 512
-#define SIGNATURE_SIZE 2048
 
 /* Separate files for the bootstrap and managed daemon; keep one previous boot
  * and one within-boot rotation. Native logs are capped at 6.5 MiB, plus
@@ -33,38 +31,9 @@ static const char *files[] = {"early-kmsg.log", "early-init.log", "kmsg.log", "i
                               "early-status.log", "status.log", "denials.log"};
 static const size_t limits[] = {KMSG_LIMIT, INIT_LIMIT, KMSG_LIMIT, INIT_LIMIT,
                                 STATUS_LIMIT, STATUS_LIMIT, DENIAL_LIMIT};
-static char signatures[DEDUP_SLOTS][SIGNATURE_SIZE];
-static size_t next_signature;
-static unsigned long long denial_unique, denial_duplicates;
+static unsigned long long denial_records;
 static char pending[BUFFER_SIZE];
 static char record[65537];
-
-/* Ignore audit timestamps/sequence numbers and volatile pid/ino fields, but
- * preserve the denied operation, contexts, path/name, class and ioctl command.
- * A bounded FIFO cache avoids unbounded RAM use. Evicted entries can reappear. */
-static int duplicate_denial(const char *avc) {
-    char key[SIGNATURE_SIZE];
-    size_t used = 0;
-    for (const char *p = avc; *p;) {
-        if ((p == avc || p[-1] == ' ') &&
-            (!strncmp(p, "pid=", 4) || !strncmp(p, "ino=", 4))) {
-            p += 4;
-            while (*p >= '0' && *p <= '9') ++p;
-            continue;
-        }
-        /* Never collapse distinct oversized messages on a truncated key. */
-        if (used + 1 >= sizeof(key)) { ++denial_unique; return 0; }
-        key[used++] = *p++;
-    }
-    key[used] = 0;
-    for (size_t i = 0; i < DEDUP_SLOTS; ++i) {
-        if (!strcmp(signatures[i], key)) { ++denial_duplicates; return 1; }
-    }
-    memcpy(signatures[next_signature], key, used + 1);
-    next_signature = (next_signature + 1) % DEDUP_SLOTS;
-    ++denial_unique;
-    return 0;
-}
 
 static int write_all(int fd, const void *data, size_t len) {
     const char *p = data;
@@ -197,23 +166,42 @@ static int append_record(int dir, const char *name, const char *data, size_t len
         if (renameat(dir, name, dir, rotated)) return -1;
         fsync(dir);
     }
-    int fd = openat(dir, name, O_CREAT | O_APPEND | O_WRONLY | O_NOFOLLOW | O_CLOEXEC | O_DSYNC, 0600);
+    int fd = openat(dir, name, O_CREAT | O_APPEND | O_WRONLY | O_NOFOLLOW | O_CLOEXEC, 0600);
     if (fd < 0) return -1;
     int rc = write_all(fd, data, len);
-    if (!rc) rc = fdatasync(fd);
+    /* Flush streams together every five seconds instead of syncing each
+     * record, so repeated AVCs do not stall the kernel log reader. */
     int saved_errno = errno;
     close(fd);
     if (rc) errno = saved_errno;
     return rc;
 }
 
+static int sync_stream_logs(int dir, int early) {
+    const size_t streams[] = {early ? 0U : 2U, early ? 1U : 3U, 6U};
+    for (size_t i = 0; i < (early ? 2U : 3U); ++i) {
+        for (int rotated = 0; rotated <= 1; ++rotated) {
+            char name[80];
+            snprintf(name, sizeof(name), "%s%s", files[streams[i]], rotated ? ".1" : "");
+            int fd = openat(dir, name, O_WRONLY | O_NOFOLLOW | O_CLOEXEC);
+            if (fd < 0) {
+                if (errno == ENOENT) continue;
+                return -1;
+            }
+            int rc = fdatasync(fd);
+            int saved_errno = errno;
+            close(fd);
+            if (rc) { errno = saved_errno; return -1; }
+        }
+    }
+    return 0;
+}
+
 static int save_record(int dir, int early, const char *record, size_t len) {
     const char *avc = strstr(record, "avc:");
     if (!early && avc && strstr(avc, "denied")) {
-        /* Deduplicate before writing the full kernel stream as well, so an
-         * AVC storm cannot evict unrelated messages from kmsg.log. */
-        if (duplicate_denial(avc)) return 0;
         if (append_record(dir, "denials.log", record, len, DENIAL_LIMIT)) return -1;
+        ++denial_records;
     }
     if (append_record(dir, files[early ? 0 : 2], record, len, KMSG_LIMIT)) return -1;
     if (strstr(record, "init:") || strstr(record, "init first stage") ||
@@ -316,12 +304,12 @@ static int collect(int early) {
         }
         if (status >= 0 && now.tv_sec - start.tv_sec - last_status >= 5) {
             last_status = now.tv_sec - start.tv_sec;
-            if (fsync(dir)) {
+            if (sync_stream_logs(dir, early) || fsync(dir)) {
                 reason = "sync-directory"; exit_error = errno; goto done;
             }
-            if (status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_unique=%llu denial_duplicates=%llu\n",
+            if (status_message(status, "running elapsed=%ld records=%llu bytes=%llu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_records=%llu\n",
                                (long)last_status, records, bytes, overruns, dropped, open_error,
-                               denial_unique, denial_duplicates)) {
+                               denial_records)) {
                 reason = "write-status"; exit_error = errno; goto done;
             }
         }
@@ -359,11 +347,11 @@ static int collect(int early) {
 done:
     clock_gettime(CLOCK_MONOTONIC, &now);
     status_message(status >= 0 ? status : STDERR_FILENO,
-            "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_unique=%llu denial_duplicates=%llu\n",
+            "exit reason=%s errno=%d (%s) elapsed=%ld records=%llu bytes=%llu buffered=%zu overruns=%llu dropped=%llu kmsg_open_errno=%d denial_records=%llu\n",
             reason, exit_error, exit_error ? strerror(exit_error) : "none",
             (long)(now.tv_sec - start.tv_sec), records, bytes, buffered, overruns, dropped, open_error,
-            denial_unique, denial_duplicates);
-    if (dir >= 0) fsync(dir);
+            denial_records);
+    if (dir >= 0) { sync_stream_logs(dir, early); fsync(dir); }
     if (status >= 0) close(status);
     if (dir >= 0) close(dir);
     if (kmsg >= 0) close(kmsg);

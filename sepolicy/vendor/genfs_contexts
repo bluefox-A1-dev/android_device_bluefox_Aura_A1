@@ -4,3 +4,7 @@ genfscon sysfs /devices/platform/soc/11f00000.i2c/i2c-7/7-0060/wakeup u:object_r
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-hvdiv-chg/wakeup u:object_r:sysfs_wakeup:s0
 genfscon proc /blocktag/earaio u:object_r:proc_earaio:s0
 genfscon sysfs /devices/platform/soc/11270000.ufshci/auto_hibern8 u:object_r:vendor_aura_sysfs_ufs_hibern8:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-006a/power_supply/primary_chg u:object_r:sysfs_batteryinfo:s0
+# Match the stable wakeup prefix, including direct wakeupN children.
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-006a/power_supply/primary_chg/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:focaltech_fp/wakeup u:object_r:sysfs_wakeup:s0

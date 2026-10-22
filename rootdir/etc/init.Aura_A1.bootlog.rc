@@ -16,13 +16,17 @@ service aura-logcat /system/bin/logcat -b all -v threadtime -v monotonic -f /met
     class core
     shutdown critical
     user root
-    group root log
+    group root system log
     seclabel u:r:logpersist:s0
     disabled
 
 # Metadata is already mounted by first-stage init. Never mount or format it here.
 on post-fs
     mkdir /metadata/aura-bootlogs 0700 root root
+    chown root root /metadata/aura-bootlogs/logcat.log
+    chmod 0600 /metadata/aura-bootlogs/logcat.log
+    chown root root /metadata/aura-bootlogs/logcat.log.1
+    chmod 0600 /metadata/aura-bootlogs/logcat.log.1
     restorecon_recursive /metadata/aura-bootlogs
     write /dev/kmsg "aura-keymint: os=${ro.build.version.release:-unknown} system_spl=${ro.build.version.security_patch:-unknown} vendor_spl=${ro.vendor.build.security_patch:-unknown} boot_spl=${ro.bootimage.build.version.security_patch:-unknown} vbstate=${ro.boot.verifiedbootstate:-unknown}"
     start aura-logcat

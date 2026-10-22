@@ -2,3 +2,5 @@ vendor.tms.tmsnfc_aidl.ITmsNfc/default u:object_r:hal_nfc_service:s0
 vendor.mediatek.hardware.nwk_opt_new.INwkOptNew/default u:object_r:vendor_aura_nwk_opt_service:s0
 FocalFingerprintService u:object_r:focaltech_fp_service:s0
 vendor.microtrust.hardware.thh.IThhDevice/default u:object_r:teei_hal_thh_service:s0
+
+vendor.microtrust.hardware.widevine.IRemotelyProvisionedComponent/default u:object_r:hal_teei_widevine_service:s0

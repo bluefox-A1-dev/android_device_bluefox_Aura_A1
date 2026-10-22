@@ -33,3 +33,4 @@
 /(vendor|system/vendor)/bin/hw/vendor\.microtrust\.hardware\.thh-service u:object_r:teei_hal_thh_exec:s0
 
 /data/vendor_de/[0-9]+/facedata/faceIdEnroll\.yuv u:object_r:vendor_aura_face_frame:s0
+/vendor/bin/hw/vendor\.microtrust\.hardware\.widevine@1\.0-service\.beanpod u:object_r:hal_teei_widevine_default_exec:s0

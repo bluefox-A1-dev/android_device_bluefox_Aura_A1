@@ -91,6 +91,11 @@ for path,replacements in config.get('text_fixups',{}).items():
     for old,new in replacements: fixup.regex_replace(re.escape(old)+r'(?:_aura)*(?![\w.-])',new)
     blob_fixups[path] = fixup
 
+# This kernel does not expose the vendor mmstat trace event. Do not try to
+# create its enable file through init's write builtin.
+blob_fixups.setdefault('vendor/etc/init/hw/init.project.rc', blob_fixup()).regex_replace(
+    r'(?m)^    (?:mkdir|write) /sys/kernel/tracing/instances/mmstat[^\n]*\n', '')
+
 elf_fixups = json.loads((Path(__file__).resolve().parent/'configs/elf-fixups.json').read_text())
 for path,symbols in elf_fixups.get('clear_versions',{}).items():
     fixup = blob_fixups.setdefault(path,blob_fixup())

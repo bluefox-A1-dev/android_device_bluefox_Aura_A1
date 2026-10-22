@@ -141,6 +141,7 @@ BOARD_MAIN_SIZE := 9661579264
 TARGET_BOARD_PLATFORM := mt6789
 
 # Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
@@ -155,6 +156,7 @@ BOARD_DO_NOT_STRIP_RECOVERY_MODULES := true
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Temporary AVC collection while bringing up enforcing policy.
 ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)

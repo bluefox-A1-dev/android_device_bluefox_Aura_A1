@@ -93,5 +93,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Source-built android.hardware.health-service.example
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.aura
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

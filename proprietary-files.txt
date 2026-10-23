@@ -63,7 +63,6 @@ vendor/bin/hw/android.hardware.gnss-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.graphics.composer@3.3-service;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.graphics.composer@3.4-service;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.health-service.example:vendor/bin/hw/android.hardware.health-service.example_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.identity-service.beanpod;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.ir-service.example:vendor/bin/hw/android.hardware.ir-service.example_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.lights-service.mediatek;MODULE_SUFFIX=_aura_vendor
@@ -371,7 +370,6 @@ vendor/etc/init/android.hardware.gatekeeper-service.beanpod.rc
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
 vendor/etc/init/android.hardware.graphics.composer@3.4-service.rc
-vendor/etc/init/android.hardware.health-service.example.rc:vendor/etc/init/android.hardware.health-service.example_aura.rc
 vendor/etc/init/android.hardware.identity-service.beanpod.rc
 vendor/etc/init/android.hardware.ir-service.example.rc:vendor/etc/init/android.hardware.ir-service.example_aura.rc
 vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc
@@ -789,7 +787,6 @@ vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.bluetooth-service-mediatek.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.boot-service.mtk.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.beanpod.xml;EXTRACT_ONLY
-vendor/etc/vintf/manifest/android.hardware.health-service.example.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.identity-service.beanpod.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml;EXTRACT_ONLY

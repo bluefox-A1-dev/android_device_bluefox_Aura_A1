@@ -11,7 +11,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service-tms u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.face\-service\.default_aura u:object_r:hal_face_default_exec:s0
 /vendor/bin/hw/android\.hardware\.contexthub\-service\.tinysys_aura u:object_r:hal_contexthub_default_exec:s0
-/vendor/bin/hw/android\.hardware\.health\-service\.example_aura u:object_r:hal_health_default_exec:s0
 /vendor/bin/hw/android\.hardware\.ir\-service\.example_aura u:object_r:hal_ir_default_exec:s0
 /vendor/bin/hw/android\.hardware\.sensors\-service\.multihal_aura u:object_r:hal_sensors_default_exec:s0
 /vendor/bin/hw/android\.hardware\.wifi\-service\-lazy_aura u:object_r:hal_wifi_default_exec:s0

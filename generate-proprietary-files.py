@@ -45,8 +45,12 @@ def main():
     needed_fixups = {}
     text_fixups = {}
     elf_modules = {}
-    renamed_file = root/'configs/renamed-binaries.json'
-    renamed = json.loads(renamed_file.read_text()) if renamed_file.is_file() else {}
+    # Same-name prebuilts let Soong prefer the OEM implementation over the
+    # source module without changing its installed filename or init identity.
+    source_replacing_binaries = {
+        'bin/hw/android.hardware.biometrics.face-service.default',
+        'bin/hw/wpa_supplicant',
+    }
     source = a.dump/'vendor'
     provided_file = root/'configs/source-provided.json'
     provided = set(json.loads(provided_file.read_text())['paths']) if provided_file.is_file() else set()
@@ -59,20 +63,15 @@ def main():
             continue
         private_lib = item.stem in private and relative.startswith(('lib/','lib64/'))
         source_path = destination
-        renamed_binary = relative in renamed
-        if renamed_binary: destination = 'vendor/'+renamed[relative]
         if private_lib:
             destination = str(Path(destination).with_name(private[item.stem]+'.so'))
-        if relative in provided and not private_lib and not renamed_binary:
+        if relative in provided and not private_lib:
             excluded.append(dict(path=destination,reason='Provided by the standard AOSP vendor build'))
             continue
         if item.is_symlink():
             if relative == 'lib/modules':  # Android's DLKM build creates this compatibility link.
                 continue
             target = str(item.readlink())
-            for old,new in renamed.items():
-                if target == '/vendor/'+old: target = '/vendor/'+new
-                elif Path(relative).parent.as_posix()+'/'+target == old: target = Path(new).name
             symlinks.append(dict(path=destination,target=target))
             continue
         if not item.is_file():
@@ -85,7 +84,8 @@ def main():
             flags = ['EXTRACT_ONLY']
             special.append(dict(path=destination,kind='overlay' if relative.startswith('overlay/') else item.suffix[1:]))
         elif item.suffix == '.so' and relative.startswith(('lib/','lib64/')):
-            flags = ['MODULE_SUFFIX=_aura_vendor']
+            flags = (['EXTRACT_ONLY'] if item.stem == 'android.hardware.wifi.supplicant-V4-ndk'
+                     else ['MODULE_SUFFIX=_aura_vendor'])
             with item.open('rb') as f: bits = 64 if f.read(5)[4] == 2 else 32
             libraries.setdefault(Path(destination).stem,[]).append(bits)
             dynamic = subprocess.check_output(['readelf','-d',str(item)],text=True)
@@ -95,7 +95,8 @@ def main():
         elif relative.startswith('bin/'):
             with item.open('rb') as f: elf = f.read(4) == b'\x7fELF'
             if elf:
-                flags = ['MODULE_SUFFIX=_aura_vendor']
+                if relative not in source_replacing_binaries:
+                    flags = ['MODULE_SUFFIX=_aura_vendor']
             else:
                 # Shell scripts are represented by sh_binary in extract-utils.
                 pass
@@ -114,11 +115,6 @@ def main():
                     elf_modules.setdefault('libneuron_adapter_mgvi', {})[arch] = dict(
                         srcs=['proprietary/'+destination],
                         shared_libs=[private.get(Path(n).stem, Path(n).stem) for n in needed])
-        if relative.startswith('etc/') and item.stat().st_size < 1024*1024:
-            try: body = item.read_text()
-            except UnicodeDecodeError: body = ''
-            changes = [['/vendor/'+old,'/vendor/'+new] for old,new in renamed.items() if '/vendor/'+old in body]
-            if changes: text_fixups[destination] = changes
         entry_path = source_path+':'+destination if source_path != destination else destination
         line = entry_path + ''.join(';'+f for f in flags)
         sections[section].append(line)

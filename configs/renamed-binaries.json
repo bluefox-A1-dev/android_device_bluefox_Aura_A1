@@ -1,4 +1,0 @@
-{
-  "bin/hw/android.hardware.biometrics.face-service.default": "bin/hw/android.hardware.biometrics.face-service.default_aura",
-  "bin/hw/wpa_supplicant": "bin/hw/wpa_supplicant_aura"
-}

@@ -1857,6 +1857,9 @@
     "android.hardware.power-service-mediatek": [
       64
     ],
+    "android.hardware.wifi.supplicant-V4-ndk": [
+      64
+    ],
     "chremetrics-cpp_aura": [
       64
     ],
@@ -7053,10 +7056,6 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
-      "path": "vendor/lib64/android.hardware.wifi.supplicant-V4-ndk.so",
-      "reason": "Provided by the standard AOSP vendor build"
-    },
-    {
       "path": "vendor/lib64/android.hidl.memory.token@1.0.so",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -8257,20 +8256,7 @@
       ]
     ]
   },
-  "text_fixups": {
-    "vendor/etc/init/android.hardware.wifi.supplicant-service.rc": [
-      [
-        "/vendor/bin/hw/wpa_supplicant",
-        "/vendor/bin/hw/wpa_supplicant_aura"
-      ]
-    ],
-    "vendor/etc/init/hw/init.connectivity.common.rc": [
-      [
-        "/vendor/bin/hw/wpa_supplicant",
-        "/vendor/bin/hw/wpa_supplicant_aura"
-      ]
-    ]
-  },
+  "text_fixups": {},
   "elf_modules": {
     "libneuron_adapter_mgvi": {
       "android_arm": {

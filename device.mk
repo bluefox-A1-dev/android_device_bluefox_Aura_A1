@@ -97,5 +97,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.aura
 
+# Source-built android.hardware.ir-service.example
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.example
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

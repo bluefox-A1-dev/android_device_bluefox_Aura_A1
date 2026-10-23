@@ -4969,6 +4969,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.ir-service.example",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hwclock",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5621,6 +5625,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/android.hardware.ir-service.example.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/boringssl_self_test.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5714,6 +5722,10 @@
     },
     {
       "path": "vendor/etc/vintf/manifest/android.hardware.health-service.example.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -8118,12 +8130,6 @@
     ]
   },
   "text_fixups": {
-    "vendor/etc/init/android.hardware.ir-service.example_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.ir-service.example",
-        "/vendor/bin/hw/android.hardware.ir-service.example_aura"
-      ]
-    ],
     "vendor/etc/init/android.hardware.sensors-service-multihal_aura.rc": [
       [
         "/vendor/bin/hw/android.hardware.sensors-service.multihal",

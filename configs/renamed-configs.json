@@ -1,5 +1,4 @@
 {
-  "etc/init/android.hardware.ir-service.example.rc": "etc/init/android.hardware.ir-service.example_aura.rc",
   "etc/init/android.hardware.sensors-service-multihal.rc": "etc/init/android.hardware.sensors-service-multihal_aura.rc",
   "etc/init/android.hardware.wifi-service-lazy.rc": "etc/init/android.hardware.wifi-service-lazy_aura.rc",
   "etc/init/face-default.rc": "etc/init/face-default_aura.rc",

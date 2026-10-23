@@ -270,6 +270,7 @@
     "etc/permissions/handheld_core_hardware.prebuilt.xml",
     "etc/vintf/manifest/android.hardware.drm-service.clearkey.xml",
     "etc/vintf/manifest/android.hardware.health-service.example.xml",
+    "etc/vintf/manifest/android.hardware.ir-service.example.xml",
     "lib/android.frameworks.cameraservice.common-V1-ndk.so",
     "lib/android.frameworks.cameraservice.device-V3-ndk.so",
     "lib/android.frameworks.cameraservice.service-V3-ndk.so",

@@ -5653,6 +5653,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/face-default.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/vndservicemanager.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5667,6 +5671,114 @@
     {
       "path": "vendor/etc/passwd",
       "reason": "Build-generated properties or accounts"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.audio.low_latency.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.bluetooth_le.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.consumerir.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.faketouch.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.hardware_keystore.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.identity_credential.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.location.gps.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.accelerometer.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.compass.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.gyroscope.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.hifi_sensors.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.light.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.proximity.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.stepcounter.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.sensor.stepdetector.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.telephony.ims.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.usb.accessory.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.usb.host.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.vulkan.compute-0.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.vulkan.level-1.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.vulkan.version-1_3.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.hardware.wifi.passpoint.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.software.device_id_attestation.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.software.ipsec_tunnels.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/android.software.verified_boot.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/features_com.android.virt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/permissions/handheld_core_hardware.prebuilt.xml",
+      "reason": "Provided by the standard AOSP vendor build"
     },
     {
       "path": "vendor/etc/selinux/genfs_labels_version.txt",
@@ -8150,12 +8262,6 @@
       [
         "/vendor/bin/hw/wpa_supplicant",
         "/vendor/bin/hw/wpa_supplicant_aura"
-      ]
-    ],
-    "vendor/etc/init/face-default_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.biometrics.face-service.default",
-        "/vendor/bin/hw/android.hardware.biometrics.face-service.default_aura"
       ]
     ],
     "vendor/etc/init/hw/init.connectivity.common.rc": [

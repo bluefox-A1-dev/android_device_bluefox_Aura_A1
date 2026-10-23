@@ -60,7 +60,8 @@ PRODUCT_PACKAGES += \
 
 # Face
 PRODUCT_PACKAGES += \
-    AuraFaceEnroll
+    AuraFaceEnroll \
+    init.Aura_A1.face.rc
 
 # Linker
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.json
@@ -74,6 +75,36 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Page Size
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
+
+# Permissions: identical to the stock declarations; use the source modules.
+PRODUCT_PACKAGES += \
+    android.hardware.audio.low_latency.prebuilt.xml \
+    android.hardware.bluetooth_le.prebuilt.xml \
+    android.hardware.consumerir.prebuilt.xml \
+    android.hardware.faketouch.prebuilt.xml \
+    android.hardware.hardware_keystore.xml \
+    android.hardware.identity_credential.xml \
+    android.hardware.location.gps.prebuilt.xml \
+    android.hardware.sensor.accelerometer.prebuilt.xml \
+    android.hardware.sensor.compass.prebuilt.xml \
+    android.hardware.sensor.gyroscope.prebuilt.xml \
+    android.hardware.sensor.hifi_sensors.prebuilt.xml \
+    android.hardware.sensor.light.prebuilt.xml \
+    android.hardware.sensor.proximity.prebuilt.xml \
+    android.hardware.sensor.stepcounter.prebuilt.xml \
+    android.hardware.sensor.stepdetector.prebuilt.xml \
+    android.hardware.telephony.ims.prebuilt.xml \
+    android.hardware.usb.accessory.prebuilt.xml \
+    android.hardware.usb.host.prebuilt.xml \
+    android.hardware.vulkan.compute-0.prebuilt.xml \
+    android.hardware.vulkan.level-1.prebuilt.xml \
+    android.hardware.vulkan.version-1_3.prebuilt.xml \
+    android.hardware.wifi.passpoint.prebuilt.xml \
+    android.software.device_id_attestation.prebuilt.xml \
+    android.software.ipsec_tunnels.prebuilt.xml \
+    android.software.verified_boot.prebuilt.xml \
+    features_com.android.virt.xml \
+    handheld_core_hardware.prebuilt.xml
 
 # Rootdir
 PRODUCT_PACKAGES += \

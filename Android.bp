@@ -44,6 +44,16 @@ prebuilt_etc {
     vendor: true,
 }
 
+// The source face example rc uses a lazy fake HAL. Preserve the real OEM
+// service's existing user, groups and startup behavior in device-owned config.
+prebuilt_etc {
+    name: "init.Aura_A1.face.rc",
+    src: "rootdir/etc/init.Aura_A1.face.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.Aura_A1.adb.rc",
     src: "rootdir/etc/init.Aura_A1.adb.rc",

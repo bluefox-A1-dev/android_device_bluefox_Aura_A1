@@ -4961,6 +4961,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.drm-service.clearkey",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hwclock",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5605,6 +5609,10 @@
       "reason": "Build-generated properties or accounts"
     },
     {
+      "path": "vendor/etc/init/android.hardware.drm-service.clearkey.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/boringssl_self_test.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5691,6 +5699,10 @@
     {
       "path": "vendor/etc/selinux/vndservice_contexts",
       "reason": "SELinux compiled from the target source policy"
+    },
+    {
+      "path": "vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml",
+      "reason": "Provided by the standard AOSP vendor build"
     },
     {
       "path": "vendor/lib/android.frameworks.cameraservice.common-V1-ndk.so",
@@ -8094,12 +8106,6 @@
     ]
   },
   "text_fixups": {
-    "vendor/etc/init/android.hardware.drm-service.clearkey_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.drm-service.clearkey",
-        "/vendor/bin/hw/android.hardware.drm-service.clearkey_aura"
-      ]
-    ],
     "vendor/etc/init/android.hardware.health-service.example_aura.rc": [
       [
         "/vendor/bin/hw/android.hardware.health-service.example",

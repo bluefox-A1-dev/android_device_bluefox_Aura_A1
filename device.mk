@@ -89,5 +89,9 @@ PRODUCT_SHIPPING_API_LEVEL := 36
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Source-built android.hardware.drm-service.clearkey
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

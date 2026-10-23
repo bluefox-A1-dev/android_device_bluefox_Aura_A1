@@ -203,9 +203,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibi
 
 # Wi-Fi: modules are loaded by the existing vendor init flow. The source
 # DriverTool must still toggle the MediaTek character device on start/stop.
-WIFI_DRIVER_STATE_CTRL_PARAM := /dev/wmtWifi
-WIFI_DRIVER_STATE_ON := 1
-WIFI_DRIVER_STATE_OFF := 0
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wmtWifi"
+WIFI_DRIVER_STATE_ON := "1"
+WIFI_DRIVER_STATE_OFF := "0"
 
 # Inherit the proprietary files
 include vendor/bluefox/Aura_A1/BoardConfigVendor.mk

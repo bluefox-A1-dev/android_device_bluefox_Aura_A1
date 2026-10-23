@@ -58,7 +58,6 @@ vendor/bin/hw/android.hardware.bluetooth.finder-service-mediatek;MODULE_SUFFIX=_
 vendor/bin/hw/android.hardware.bluetooth.ranging-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.boot-service.mtk;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.contexthub-service.tinysys:vendor/bin/hw/android.hardware.contexthub-service.tinysys_aura;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.drm-service.clearkey:vendor/bin/hw/android.hardware.drm-service.clearkey_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.gatekeeper-service.beanpod;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.gnss-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service;MODULE_SUFFIX=_aura_vendor
@@ -368,7 +367,6 @@ vendor/etc/init/aee_aedv64_v2.rc
 vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc
 vendor/etc/init/android.hardware.bluetooth-service-mediatek.rc
 vendor/etc/init/android.hardware.boot-service.mtk.rc
-vendor/etc/init/android.hardware.drm-service.clearkey.rc:vendor/etc/init/android.hardware.drm-service.clearkey_aura.rc
 vendor/etc/init/android.hardware.gatekeeper-service.beanpod.rc
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
@@ -790,7 +788,6 @@ vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml;EXTRACT
 vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.bluetooth-service-mediatek.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.boot-service.mtk.xml;EXTRACT_ONLY
-vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.beanpod.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.health-service.example.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.identity-service.beanpod.xml;EXTRACT_ONLY

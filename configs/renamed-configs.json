@@ -1,5 +1,4 @@
 {
-  "etc/init/android.hardware.drm-service.clearkey.rc": "etc/init/android.hardware.drm-service.clearkey_aura.rc",
   "etc/init/android.hardware.health-service.example.rc": "etc/init/android.hardware.health-service.example_aura.rc",
   "etc/init/android.hardware.ir-service.example.rc": "etc/init/android.hardware.ir-service.example_aura.rc",
   "etc/init/android.hardware.sensors-service-multihal.rc": "etc/init/android.hardware.sensors-service-multihal_aura.rc",

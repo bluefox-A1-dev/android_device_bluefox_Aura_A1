@@ -1,0 +1,16 @@
+persist.vendor.fingerprint.chip u:object_r:vendor_focaltech_chip_prop:s0 exact string
+
+# Read-only GPU configuration queried by libgpud in gralloc clients.
+ro.vendor.debug.gpud.gralloc.fbc.disable u:object_r:vendor_mtk_gpu_prop:s0 exact string
+ro.vendor.debug.gpud.gralloc.heap.uncache u:object_r:vendor_mtk_gpu_prop:s0 exact string
+ro.vendor.debug.gpud.gralloc.log u:object_r:vendor_mtk_gpu_prop:s0 exact string
+
+# Camera settings referenced by the A1 pipeline/gralloc utility libraries.
+ro.vendor.smvr.p2batch.fhd u:object_r:vendor_mtk_camera_prop:s0 exact string
+ro.vendor.smvr.p2batch.hd u:object_r:vendor_mtk_camera_prop:s0 exact string
+ro.vendor.smvr.p2batch.vga u:object_r:vendor_mtk_camera_prop:s0 exact string
+ro.vendor.camera3.zsl.default u:object_r:vendor_mtk_camera_prop:s0 exact string
+vendor.camera.mdp.cz.enable u:object_r:vendor_mtk_camera_prop:s0 exact string
+vendor.camera.mdp.dre.enable u:object_r:vendor_mtk_camera_prop:s0 exact string
+# The library constructs the suffix from stream type and RAM configuration.
+persist.vendor.camera3.pipeline.bufnum. u:object_r:vendor_mtk_camera_prop:s0 prefix string

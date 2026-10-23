@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <bool name="config_intrusiveNotificationLed">false</bool>
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Override stock 61 Hz defaults for the 60/90 Hz panel. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultPeakRefreshRate">90</integer>
+</resources>

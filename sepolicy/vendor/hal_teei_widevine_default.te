@@ -1,0 +1,12 @@
+# Beanpod RKP helper, separate from the Widevine DRM HAL.
+type hal_teei_widevine_default, domain;
+type hal_teei_widevine_default_exec, exec_type, vendor_file_type, file_type;
+type hal_teei_widevine_service, service_manager_type, hal_service_type, protected_service;
+hal_attribute(teei_widevine)
+init_daemon_domain(hal_teei_widevine_default)
+hal_server_domain(hal_teei_widevine_default, hal_teei_widevine)
+binder_use(hal_teei_widevine_default)
+hal_attribute_service(hal_teei_widevine, hal_teei_widevine_service)
+add_service(hal_teei_widevine_default, hal_teei_widevine_service)
+allow hal_teei_widevine_default teei_client_device:chr_file rw_file_perms;
+get_prop(hal_teei_widevine_default, vendor_mtk_soc_prop)

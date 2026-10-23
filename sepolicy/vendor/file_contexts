@@ -1,0 +1,36 @@
+# Device file contexts
+/vendor/bin/aura_bootlog u:object_r:aura_bootlog_exec:s0
+/metadata/aura-bootlogs(/.*)? u:object_r:aura_bootlog_file:s0
+/metadata/aura-bootlogs/logcat\.log(\.1)? u:object_r:misc_logd_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint-service\.beanpod u:object_r:hal_keymint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint@4\.0-service\.beanpod u:object_r:hal_keymint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.sharedsecret-service\.beanpod u:object_r:hal_keymint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.secureclock-service\.beanpod u:object_r:hal_keymint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper-service\.beanpod u:object_r:hal_gatekeeper_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service-tms u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.face\-service\.default_aura u:object_r:hal_face_default_exec:s0
+/vendor/bin/hw/android\.hardware\.contexthub\-service\.tinysys_aura u:object_r:hal_contexthub_default_exec:s0
+/vendor/bin/hw/android\.hardware\.drm\-service\.clearkey_aura u:object_r:hal_drm_clearkey_aidl_exec:s0
+/vendor/bin/hw/android\.hardware\.health\-service\.example_aura u:object_r:hal_health_default_exec:s0
+/vendor/bin/hw/android\.hardware\.ir\-service\.example_aura u:object_r:hal_ir_default_exec:s0
+/vendor/bin/hw/android\.hardware\.sensors\-service\.multihal_aura u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/android\.hardware\.wifi\-service\-lazy_aura u:object_r:hal_wifi_default_exec:s0
+/vendor/bin/hw/wpa_supplicant_aura u:object_r:hal_wifi_supplicant_default_exec:s0
+/vendor/bin/hw/android\.hardware\.boot-service\.mtk u:object_r:hal_bootctl_default_exec:s0
+/vendor/bin/hw/android\.hardware\.bluetooth-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
+/vendor/bin/hw/android\.hardware\.identity-service\.beanpod u:object_r:hal_identity_default_exec:s0
+/vendor/bin/hw/android\.hardware\.usb-aidl-service\.mediatek u:object_r:mtk_hal_usb_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\.gadget-aidl-service\.mediatek u:object_r:mtk_hal_usb_exec:s0
+/vendor/bin/mt6789/v3avpud-64b\.mt6789 u:object_r:vpud_native_exec:s0
+/vendor/lib(64)?/mt6789/libmtk_mali_user\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/android\.hardware\.graphics\.common-V6-ndk_aura\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.graphics-V1-ndk\.so u:object_r:same_process_hal_file:s0
+/dev/tms_nfc u:object_r:nfc_device:s0
+/dev/focaltech_fp u:object_r:fingerprint_device:s0
+/dev/focaltech_fpspi u:object_r:fingerprint_device:s0
+/data/vendor/focaltech(/.*)? u:object_r:ff_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.microtrust\.hardware\.thh-service u:object_r:teei_hal_thh_exec:s0
+
+/data/vendor_de/[0-9]+/facedata/faceIdEnroll\.yuv u:object_r:vendor_aura_face_frame:s0
+/vendor/bin/hw/vendor\.microtrust\.hardware\.widevine@1\.0-service\.beanpod u:object_r:hal_teei_widevine_default_exec:s0

@@ -1,0 +1,10 @@
+{
+  "bin/hw/android.hardware.biometrics.face-service.default": "bin/hw/android.hardware.biometrics.face-service.default_aura",
+  "bin/hw/android.hardware.contexthub-service.tinysys": "bin/hw/android.hardware.contexthub-service.tinysys_aura",
+  "bin/hw/android.hardware.drm-service.clearkey": "bin/hw/android.hardware.drm-service.clearkey_aura",
+  "bin/hw/android.hardware.health-service.example": "bin/hw/android.hardware.health-service.example_aura",
+  "bin/hw/android.hardware.ir-service.example": "bin/hw/android.hardware.ir-service.example_aura",
+  "bin/hw/android.hardware.sensors-service.multihal": "bin/hw/android.hardware.sensors-service.multihal_aura",
+  "bin/hw/android.hardware.wifi-service-lazy": "bin/hw/android.hardware.wifi-service-lazy_aura",
+  "bin/hw/wpa_supplicant": "bin/hw/wpa_supplicant_aura"
+}

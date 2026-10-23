@@ -1,0 +1,20 @@
+{
+  "android.hardware.audio.common-V3-ndk": "android.hardware.audio.common-V3-ndk_aura",
+  "android.hardware.audio.effect-V2-ndk": "android.hardware.audio.effect-V2-ndk_aura",
+  "android.hardware.bluetooth.audio-V4-ndk": "android.hardware.bluetooth.audio-V4-ndk_aura",
+  "android.hardware.camera.common-V2-ndk": "android.hardware.camera.common-V2-ndk_aura",
+  "android.hardware.graphics.common-V5-ndk": "android.hardware.graphics.common-V5-ndk_aura",
+  "android.hardware.graphics.common-V6-ndk": "android.hardware.graphics.common-V6-ndk_aura",
+  "android.hardware.sensors-V2-ndk": "android.hardware.sensors-V2-ndk_aura",
+  "android.media.audio.common.types-V3-ndk": "android.media.audio.common.types-V3-ndk_aura",
+  "chremetrics-cpp": "chremetrics-cpp_aura",
+  "lib_android_keymaster_keymint_utils": "lib_android_keymaster_keymint_utils_aura",
+  "libaudioutils": "libaudioutils_aura",
+  "libkeymaster_messages": "libkeymaster_messages_aura",
+  "libkeymaster_portable": "libkeymaster_portable_aura",
+  "libkeymint": "libkeymint_aura",
+  "libpuresoftkeymasterdevice": "libpuresoftkeymasterdevice_aura",
+  "libtinyxml2": "libtinyxml2_aura",
+  "libvibratorutils": "libvibratorutils_aura",
+  "libwifi-hal": "libwifi-hal_aura"
+}

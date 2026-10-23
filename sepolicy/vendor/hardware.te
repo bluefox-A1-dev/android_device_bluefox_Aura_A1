@@ -1,0 +1,23 @@
+allow hal_audio_default sysfs_batteryinfo:dir search;
+allow hal_audio_default sysfs_batteryinfo:file r_file_perms;
+allow system_server sysfs_vibrator:file r_file_perms;
+type vendor_aura_sysfs_ufs_hibern8, fs_type, sysfs_type;
+allow eara_io vendor_aura_sysfs_ufs_hibern8:file rw_file_perms;
+allow thermal_core sysfs_dvfsrc_dbg:dir search;
+r_dir_file(fuelgauged_nvram, sysfs_dt_firmware_android)
+get_prop(hal_face_default, camera_config_prop)
+allow hal_face_default fwk_camera_service:service_manager find;
+binder_call(hal_face_default, cameraserver)
+binder_call(cameraserver, hal_face_default)
+# Face HAL imports camera gralloc buffers.
+hal_client_domain(hal_face_default, hal_graphics_allocator)
+allow mtk_hal_camera fwk_sensor_service:service_manager find;
+# Commands observed on this device's newer EAS driver.
+allowxperm mtk_hal_power proc_easmgr:file ioctl { 0x673d 0x673e };
+hal_client_domain(mtk_hal_pq, hal_mtk_composer_ext)
+type vendor_aura_nwk_opt_service, service_manager_type, hal_service_type, protected_service;
+hal_attribute_service(hal_nwk_opt, vendor_aura_nwk_opt_service)
+binder_use(mtk_hal_nwk_opt)
+set_prop(vendor_init, vendor_mtk_meta_connecttype_prop)
+set_prop(vendor_init, vendor_mtk_vonr_prop)
+set_prop(vendor_init, vendor_mtk_frs_prop)

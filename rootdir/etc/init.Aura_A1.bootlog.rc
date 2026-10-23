@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+service aura-bootlog /vendor/bin/aura_bootlog
+    class core
+    shutdown critical
+    user root
+    group root
+    capabilities SYSLOG
+    disabled
+    oneshot
+
+# Keep logd messages available even when /data and compressed APEX activation fail.
+# This uses the platform's existing logpersist domain and bounded rotation.
+service aura-logcat /system/bin/logcat -b all -v threadtime -v monotonic -f /metadata/aura-bootlogs/logcat.log -r 512 -n 1
+    class core
+    shutdown critical
+    user root
+    group root system log
+    seclabel u:r:logpersist:s0
+    disabled
+
+# Metadata is already mounted by first-stage init. Never mount or format it here.
+on post-fs
+    mkdir /metadata/aura-bootlogs 0700 root root
+    chown root root /metadata/aura-bootlogs/logcat.log
+    chmod 0600 /metadata/aura-bootlogs/logcat.log
+    chown root root /metadata/aura-bootlogs/logcat.log.1
+    chmod 0600 /metadata/aura-bootlogs/logcat.log.1
+    restorecon_recursive /metadata/aura-bootlogs
+    write /dev/kmsg "aura-keymint: os=${ro.build.version.release:-unknown} system_spl=${ro.build.version.security_patch:-unknown} vendor_spl=${ro.vendor.build.security_patch:-unknown} boot_spl=${ro.bootimage.build.version.security_patch:-unknown} vbstate=${ro.boot.verifiedbootstate:-unknown}"
+    start aura-logcat
+    start aura-bootlog
+    start logd-auditctl
+
+# Keep collecting after boot completion for interactive hardware testing.
+on property:sys.boot_completed=1
+    # Override an older persisted rate as well as the logd default.
+    setprop persist.logd.audit.rate 0

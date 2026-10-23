@@ -1,0 +1,7 @@
+# First-stage init checks files before transitioning out of the kernel domain.
+allow kernel sepolicy_file:file getattr;
+allow kernel system_bootstrap_lib_file:{ dir file } getattr;
+allow kernel system_dlkm_file:dir getattr;
+
+# Kernel RFCOMM worker binds Bluetooth sockets.
+allow kernel self:global_capability_class_set net_bind_service;

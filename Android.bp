@@ -5,3 +5,44 @@
 
 soong_namespace {
 }
+
+sh_binary_host {
+    name: "aura_a1_mkbootimg",
+    src: "tools/aura_a1_mkbootimg.py",
+    required: ["mkbootimg"],
+}
+
+prebuilt_etc {
+    name: "init.Aura_A1.adb.rc",
+    src: "rootdir/etc/init.Aura_A1.adb.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+cc_binary {
+    name: "aura_bootlog",
+    srcs: ["debug/bootlog.c"],
+    vendor: true,
+    compile_multilib: "64",
+    stl: "none",
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}
+
+prebuilt_etc {
+    name: "init.Aura_A1.bootlog.rc",
+    src: "rootdir/etc/init.Aura_A1.bootlog.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+// Register stock HIDL interfaces for metadata and init verification.
+prebuilt_hidl_interfaces {
+    name: "aura_stock_mediatek_hidl_interfaces",
+    interfaces: [
+        "vendor.mediatek.hardware.aee@1.0::IAee",
+        "vendor.mediatek.hardware.aee@1.1::IAee",
+        "vendor.mediatek.hardware.atci@1.0::IAtcid",
+    ],
+}

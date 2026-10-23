@@ -1,0 +1,58 @@
+{
+  "clear_versions": {
+    "vendor/lib64/libmcve.so": [
+      "AHardwareBuffer_allocate",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_release",
+      "AHardwareBuffer_unlock"
+    ],
+    "vendor/lib/libmp4enc_sa.ca7.so": [
+      "__aeabi_memclr",
+      "__aeabi_memcpy",
+      "__aeabi_memset",
+      "__gnu_Unwind_Find_exidx"
+    ],
+    "vendor/lib64/mt6789/libneuron_adapter_mgvi.so": [
+      "AHardwareBuffer_describe",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_unlock"
+    ],
+    "vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so": [
+      "AHardwareBuffer_allocate",
+      "AHardwareBuffer_createFromHandle",
+      "AHardwareBuffer_describe",
+      "AHardwareBuffer_getNativeHandle",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_release",
+      "AHardwareBuffer_unlock"
+    ],
+    "vendor/lib/libtflite_mtk.so": [
+      "AHardwareBuffer_allocate",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_release",
+      "AHardwareBuffer_unlock"
+    ],
+    "vendor/lib64/libtflite_mtk.so": [
+      "AHardwareBuffer_allocate",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_release",
+      "AHardwareBuffer_unlock"
+    ],
+    "vendor/lib/mt6789/libneuron_adapter_mgvi.so": [
+      "AHardwareBuffer_describe",
+      "AHardwareBuffer_lock",
+      "AHardwareBuffer_unlock"
+    ]
+  },
+  "add_needed": {
+    "vendor/lib/libteei_daemon_vfs.so": [
+      "liblog.so"
+    ],
+    "vendor/lib64/libteei_daemon_vfs.so": [
+      "liblog.so"
+    ],
+    "vendor/lib/libvp8enc_sa.ca7.so": [
+      "libcompiler_rt.so"
+    ]
+  }
+}

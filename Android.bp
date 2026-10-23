@@ -15,21 +15,6 @@ install_symlink {
     symlink_target: "libwifi-hal_aura.so",
 }
 
-// Keep the existing health-only init service; the upstream example rc also
-// starts a charger-mode service, which is outside this replacement's scope.
-cc_binary {
-    name: "android.hardware.health-service.aura",
-    stem: "android.hardware.health-service.example",
-    vendor: true,
-    relative_install_path: "hw",
-    defaults: ["libhealth_aidl_impl_user"],
-    static_libs: ["libhealth_aidl_impl"],
-    srcs: ["health/service.cpp"],
-    init_rc: ["rootdir/etc/android.hardware.health-service.example.rc"],
-    vintf_fragments: ["health/android.hardware.health-service.aura.xml"],
-    overrides: ["android.hardware.health-service.example"],
-}
-
 sh_binary_host {
     name: "aura_a1_mkbootimg",
     src: "tools/aura_a1_mkbootimg.py",

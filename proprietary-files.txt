@@ -76,7 +76,6 @@ vendor/bin/hw/android.hardware.thermal-service.mediatek;MODULE_SUFFIX=_aura_vend
 vendor/bin/hw/android.hardware.usb-aidl-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.usb.gadget-aidl-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.vibrator-service.mediatek;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.wifi-service-lazy:vendor/bin/hw/android.hardware.wifi-service-lazy_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/hostapd;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator-V2-service-mediatek.mt6789;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/mt6789/camerahalserver;MODULE_SUFFIX=_aura_vendor
@@ -373,7 +372,6 @@ vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
 vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc
 vendor/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc
-vendor/etc/init/android.hardware.wifi-service-lazy.rc:vendor/etc/init/android.hardware.wifi-service-lazy_aura.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
@@ -788,7 +786,6 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-aidl-service.mediatek.xml;EXTRACT_ONLY
-vendor/etc/vintf/manifest/android.hardware.wifi-service.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/bluetooth_audio.xml;EXTRACT_ONLY

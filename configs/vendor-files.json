@@ -4981,6 +4981,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.wifi-service-lazy",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hwclock",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5641,6 +5645,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/android.hardware.wifi-service-lazy.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/boringssl_self_test.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5742,6 +5750,10 @@
     },
     {
       "path": "vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/vintf/manifest/android.hardware.wifi-service.xml",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -7638,12 +7650,6 @@
         "libkeymint_aura.so"
       ]
     ],
-    "vendor/bin/hw/android.hardware.wifi-service-lazy_aura": [
-      [
-        "libwifi-hal.so",
-        "libwifi-hal_aura.so"
-      ]
-    ],
     "vendor/bin/hw/mt6789/android.hardware.graphics.allocator-V2-service-mediatek.mt6789": [
       [
         "android.hardware.graphics.common-V6-ndk.so",
@@ -8140,12 +8146,6 @@
     ]
   },
   "text_fixups": {
-    "vendor/etc/init/android.hardware.wifi-service-lazy_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.wifi-service-lazy",
-        "/vendor/bin/hw/android.hardware.wifi-service-lazy_aura"
-      ]
-    ],
     "vendor/etc/init/android.hardware.wifi.supplicant-service.rc": [
       [
         "/vendor/bin/hw/wpa_supplicant",

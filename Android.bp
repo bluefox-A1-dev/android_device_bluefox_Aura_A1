@@ -6,6 +6,15 @@
 soong_namespace {
 }
 
+// The MediaTek wrapper dlopens this name. Keep the OEM HAL's private SONAME
+// and existing consumers unchanged while exposing it to the source wrapper.
+install_symlink {
+    name: "aura_wifi_hal_mtk_link",
+    vendor: true,
+    installed_location: "lib64/libwifi-hal-mtk.so",
+    symlink_target: "libwifi-hal_aura.so",
+}
+
 // Keep the existing health-only init service; the upstream example rc also
 // starts a charger-mode service, which is outside this replacement's scope.
 cc_binary {

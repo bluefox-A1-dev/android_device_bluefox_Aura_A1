@@ -1,5 +1,4 @@
-# Beanpod vendor RKP helper; separate from the standard Widevine DRM HAL.
-# Service identity and TEE access follow the stock A1 policy.
+# Beanpod RKP helper, separate from the Widevine DRM HAL.
 type hal_teei_widevine_default, domain;
 type hal_teei_widevine_default_exec, exec_type, vendor_file_type, file_type;
 type hal_teei_widevine_service, service_manager_type, hal_service_type, protected_service;

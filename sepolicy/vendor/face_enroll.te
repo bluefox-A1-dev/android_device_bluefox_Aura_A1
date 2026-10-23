@@ -1,5 +1,4 @@
-# The stock HAL consumes this single temporary NV21 frame, not a camera Surface.
-# Keep the app's access separate from stored face templates.
+# Limit enrollment frame access to faceIdEnroll.yuv.
 type vendor_aura_face_frame, file_type, data_file_type;
 type_transition hal_face_default face_vendor_data_file:file vendor_aura_face_frame "faceIdEnroll.yuv";
 allow hal_face_default vendor_aura_face_frame:file create_file_perms;

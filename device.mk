@@ -3,12 +3,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Storage
+# Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_VIRTUAL_AB_COMPRESSION := true
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.default_recovery
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -18,7 +24,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
-# Audio effects loaded by the stock AIDL factory.
+# Audio
 PRODUCT_PACKAGES += \
     libbundleaidl \
     libdownmixaidl \
@@ -33,9 +39,11 @@ PRODUCT_PACKAGES += \
 # Debug
 ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
 WITH_ADB_INSECURE := true
-PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=adb
-PRODUCT_SYSTEM_EXT_PROPERTIES += service.adb.root=1
-PRODUCT_SYSTEM_EXT_PROPERTIES += persist.logd.audit.rate=0
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.logd.audit.rate=0 \
+    persist.sys.usb.config=adb \
+    service.adb.root=1
 
 PRODUCT_PACKAGES += \
     aura_bootlog \
@@ -50,8 +58,9 @@ PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Generic Ramdisk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+# Face
+PRODUCT_PACKAGES += \
+    AuraFaceEnroll
 
 # Linker
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += $(LOCAL_PATH)/configs/linker.config.json
@@ -61,17 +70,10 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayAuraA1 \
     SettingsOverlayAuraA1
 
-# Stock face enrollment needs an NV21 file producer.
-PRODUCT_PACKAGES += AuraFaceEnroll
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Page Size
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
-
-# Recovery
-PRODUCT_PACKAGES += \
-    android.hardware.boot-service.default_recovery
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -80,10 +82,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6789:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6789
 
-# Shipping API Level
+# Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 36
 
-# Soong Namespaces
+# Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 

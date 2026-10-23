@@ -1,17 +1,16 @@
-# Focaltech's stock HAL stores its configuration and templates here.
+# Focaltech configuration and templates.
 type ff_data_file, file_type, data_file_type;
 allow hal_fingerprint_default ff_data_file:dir create_dir_perms;
 allow hal_fingerprint_default ff_data_file:file create_file_perms;
 
-# The stock driver's FF_IOC_* commands use ioctl type 'f'. Device access
-# itself is granted by the common MTK hal_fingerprint_default policy.
+# FF_IOC_* commands use ioctl type 'f'.
 allowxperm hal_fingerprint_default fingerprint_device:chr_file ioctl { 0x6600-0x66ff };
 
-# The OEM extension is registered by libfingerprint.focaltech.default.so.
+# Focaltech extension service.
 type focaltech_fp_service, service_manager_type, protected_service;
 add_service(hal_fingerprint_default, focaltech_fp_service)
 allow platform_app focaltech_fp_service:service_manager find;
 
-# The OEM HAL publishes the detected vendor through this persistent property.
+# Detected fingerprint vendor.
 vendor_internal_prop(vendor_focaltech_chip_prop)
 set_prop(hal_fingerprint_default, vendor_focaltech_chip_prop)

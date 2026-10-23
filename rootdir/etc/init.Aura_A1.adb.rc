@@ -1,9 +1,7 @@
 # SPDX-FileCopyrightText: 2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 
-# The stock post-fs USB action creates the gadget and mounts FunctionFS.
-# Request adbd before framework startup; init defers updatable services until
-# their APEX is activated. Leave gadget composition to the standard USB rules.
+# Start adbd after stock USB setup; init waits for APEX activation.
 on post-fs
     setprop sys.usb.controller musb-hdrc
     setprop vendor.usb.controller musb-hdrc

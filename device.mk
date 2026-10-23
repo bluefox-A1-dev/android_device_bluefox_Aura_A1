@@ -118,8 +118,7 @@ PRODUCT_SHIPPING_API_LEVEL := 36
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/mediatek
+    $(LOCAL_PATH)
 
 # Source-built android.hardware.drm-service.clearkey
 PRODUCT_PACKAGES += \

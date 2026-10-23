@@ -51,7 +51,7 @@ vendor/bin/gps_dump;MODULE_SUFFIX=_aura_vendor
 vendor/bin/gsm0710muxd;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hostapd_cli;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.audio.service-aidl.mediatek;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.biometrics.face-service.default:vendor/bin/hw/android.hardware.biometrics.face-service.default_aura;MODULE_SUFFIX=_aura_vendor
+vendor/bin/hw/android.hardware.biometrics.face-service.default
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.bluetooth-service-mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.bluetooth.finder-service-mediatek;MODULE_SUFFIX=_aura_vendor
@@ -98,7 +98,7 @@ vendor/bin/hw/vendor.mediatek.hardware.vgoservice;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/vendor.microtrust.hardware.thh-service;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/vendor.microtrust.hardware.widevine@1.0-service.beanpod;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/vtservice_aidl;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/wpa_supplicant:vendor/bin/hw/wpa_supplicant_aura;MODULE_SUFFIX=_aura_vendor
+vendor/bin/hw/wpa_supplicant
 vendor/bin/init.insmod.sh
 vendor/bin/init.pstore_blk.sh
 vendor/bin/init_thh;MODULE_SUFFIX=_aura_vendor
@@ -1324,6 +1324,7 @@ vendor/lib64/android.hardware.graphics.common-V5-ndk.so:vendor/lib64/android.har
 vendor/lib64/android.hardware.graphics.common-V6-ndk.so:vendor/lib64/android.hardware.graphics.common-V6-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME
 vendor/lib64/android.hardware.power-service-mediatek.so;MODULE_SUFFIX=_aura_vendor
 vendor/lib64/android.hardware.sensors-V2-ndk.so:vendor/lib64/android.hardware.sensors-V2-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME
+vendor/lib64/android.hardware.wifi.supplicant-V4-ndk.so;EXTRACT_ONLY
 vendor/lib64/android.media.audio.common.types-V3-ndk.so:vendor/lib64/android.media.audio.common.types-V3-ndk_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME
 vendor/lib64/chremetrics-cpp.so:vendor/lib64/chremetrics-cpp_aura.so;MODULE_SUFFIX=_aura_vendor;FIX_SONAME
 vendor/lib64/egl/libGLES_meow.so;MODULE_SUFFIX=_aura_vendor

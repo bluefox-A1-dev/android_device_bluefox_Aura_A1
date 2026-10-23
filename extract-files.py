@@ -16,6 +16,9 @@ config = json.loads((Path(__file__).resolve().parent/'configs/vendor-files.json'
 
 
 def vendor_library_name(lib, partition, *args, **kwargs):
+    # The stock supplicant interface is a same-name prebuilt, not a renamed ABI.
+    if lib == 'android.hardware.wifi.supplicant-V4-ndk':
+        return lib
     if partition == 'vendor' and lib in config['libraries']:
         return lib+'_aura_vendor'
     return None
@@ -24,6 +27,18 @@ def vendor_library_name(lib, partition, *args, **kwargs):
 def write_vendor_metadata(ctx, packages):
     encoder = BpJSONEncoder(legacy=ctx.legacy)
     extra = []
+    # AIDL-generated source libraries are system modules with vendor variants.
+    # Match that partition model; the product explicitly selects .vendor.
+    supplicant_interface = 'android.hardware.wifi.supplicant-V4-ndk'
+    if supplicant_interface in config['libraries']:
+        (BpBuilder(encoder).set_rule_name('cc_prebuilt_library_shared')
+         .name(supplicant_interface).set('owner', 'bluefox').set('vendor_available', True)
+         .set('srcs', ['proprietary/vendor/lib64/' + supplicant_interface + '.so'])
+         .set('shared_libs', ['libbinder_ndk', 'android.hardware.wifi.common-V2-ndk',
+                              'libc++', 'libc', 'libm', 'libdl'])
+         .set('compile_multilib', '64').set('strip', {'none': True})
+         .set('prefer', True).write(ctx.bp_out))
+        extra.append(supplicant_interface + '.vendor')
     for stem,targets in config.get('elf_modules',{}).items():
         name = stem+'_aura_vendor'
         (BpBuilder(encoder).set_rule_name('cc_prebuilt_library_shared').name(name)

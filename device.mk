@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
 
 # Source-built android.hardware.health-service.example
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.aura
+    android.hardware.health-service.example
 
 # Source-built android.hardware.ir-service.example
 PRODUCT_PACKAGES += \

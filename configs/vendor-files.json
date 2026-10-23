@@ -4965,6 +4965,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.health-service.example",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hwclock",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5613,6 +5617,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/android.hardware.health-service.example.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/boringssl_self_test.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5702,6 +5710,10 @@
     },
     {
       "path": "vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/vintf/manifest/android.hardware.health-service.example.xml",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -8106,12 +8118,6 @@
     ]
   },
   "text_fixups": {
-    "vendor/etc/init/android.hardware.health-service.example_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.health-service.example",
-        "/vendor/bin/hw/android.hardware.health-service.example_aura"
-      ]
-    ],
     "vendor/etc/init/android.hardware.ir-service.example_aura.rc": [
       [
         "/vendor/bin/hw/android.hardware.ir-service.example",
@@ -8142,22 +8148,10 @@
         "/vendor/bin/hw/android.hardware.biometrics.face-service.default_aura"
       ]
     ],
-    "vendor/etc/init/hw/factory_init.rc": [
-      [
-        "/vendor/etc/init/android.hardware.health-service.example.rc",
-        "/vendor/etc/init/android.hardware.health-service.example_aura.rc"
-      ]
-    ],
     "vendor/etc/init/hw/init.connectivity.common.rc": [
       [
         "/vendor/bin/hw/wpa_supplicant",
         "/vendor/bin/hw/wpa_supplicant_aura"
-      ]
-    ],
-    "vendor/etc/init/hw/meta_init.rc": [
-      [
-        "/vendor/etc/init/android.hardware.health-service.example.rc",
-        "/vendor/etc/init/android.hardware.health-service.example_aura.rc"
       ]
     ]
   },

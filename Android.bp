@@ -28,6 +28,14 @@ sh_binary_host {
 }
 
 prebuilt_etc {
+    name: "init.Aura_A1.sensors.rc",
+    src: "rootdir/etc/init.Aura_A1.sensors.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.Aura_A1.adb.rc",
     src: "rootdir/etc/init.Aura_A1.adb.rc",
     sub_dir: "init",

@@ -101,5 +101,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
+# Source-built android.hardware.sensors-service.multihal
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal \
+    init.Aura_A1.sensors.rc
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

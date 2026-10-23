@@ -4973,6 +4973,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.sensors-service.multihal",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hwclock",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5629,6 +5633,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/android.hardware.sensors-service-multihal.rc",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/etc/init/boringssl_self_test.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5726,6 +5734,10 @@
     },
     {
       "path": "vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
+      "path": "vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml",
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
@@ -8130,12 +8142,6 @@
     ]
   },
   "text_fixups": {
-    "vendor/etc/init/android.hardware.sensors-service-multihal_aura.rc": [
-      [
-        "/vendor/bin/hw/android.hardware.sensors-service.multihal",
-        "/vendor/bin/hw/android.hardware.sensors-service.multihal_aura"
-      ]
-    ],
     "vendor/etc/init/android.hardware.wifi-service-lazy_aura.rc": [
       [
         "/vendor/bin/hw/android.hardware.wifi-service-lazy",

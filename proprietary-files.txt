@@ -73,7 +73,6 @@ vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk-lazy;MODULE_SUFFI
 vendor/bin/hw/android.hardware.nfc-service-tms;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.security.keymint@4.0-service.beanpod;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.sensors-service.multihal:vendor/bin/hw/android.hardware.sensors-service.multihal_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.thermal-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.usb-aidl-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.usb.gadget-aidl-service.mediatek;MODULE_SUFFIX=_aura_vendor
@@ -373,7 +372,6 @@ vendor/etc/init/android.hardware.identity-service.beanpod.rc
 vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
-vendor/etc/init/android.hardware.sensors-service-multihal.rc:vendor/etc/init/android.hardware.sensors-service-multihal_aura.rc
 vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc
 vendor/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc
 vendor/etc/init/android.hardware.wifi-service-lazy.rc:vendor/etc/init/android.hardware.wifi-service-lazy_aura.rc
@@ -789,7 +787,6 @@ vendor/etc/vintf/manifest/android.hardware.identity-service.beanpod.xml;EXTRACT_
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml;EXTRACT_ONLY
-vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-aidl-service.mediatek.xml;EXTRACT_ONLY
 vendor/etc/vintf/manifest/android.hardware.wifi-service.xml;EXTRACT_ONLY

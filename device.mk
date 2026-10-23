@@ -106,5 +106,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     init.Aura_A1.sensors.rc
 
+# Source-built android.hardware.contexthub-service.tinysys
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub-service.tinysys
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

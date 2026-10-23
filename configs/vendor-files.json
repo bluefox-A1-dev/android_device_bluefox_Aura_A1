@@ -4961,6 +4961,10 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/bin/hw/android.hardware.contexthub-service.tinysys",
+      "reason": "Provided by the standard AOSP vendor build"
+    },
+    {
       "path": "vendor/bin/hw/android.hardware.drm-service.clearkey",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -7612,12 +7616,6 @@
       [
         "libaudioutils.so",
         "libaudioutils_aura.so"
-      ]
-    ],
-    "vendor/bin/hw/android.hardware.contexthub-service.tinysys_aura": [
-      [
-        "chremetrics-cpp.so",
-        "chremetrics-cpp_aura.so"
       ]
     ],
     "vendor/bin/hw/android.hardware.identity-service.beanpod": [

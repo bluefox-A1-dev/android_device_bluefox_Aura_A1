@@ -57,7 +57,6 @@ vendor/bin/hw/android.hardware.bluetooth-service-mediatek;MODULE_SUFFIX=_aura_ve
 vendor/bin/hw/android.hardware.bluetooth.finder-service-mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.bluetooth.ranging-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.boot-service.mtk;MODULE_SUFFIX=_aura_vendor
-vendor/bin/hw/android.hardware.contexthub-service.tinysys:vendor/bin/hw/android.hardware.contexthub-service.tinysys_aura;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.gatekeeper-service.beanpod;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.gnss-service.mediatek;MODULE_SUFFIX=_aura_vendor
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service;MODULE_SUFFIX=_aura_vendor

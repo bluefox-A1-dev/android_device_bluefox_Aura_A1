@@ -1,0 +1,6 @@
+service vendor.face-default /vendor/bin/hw/android.hardware.biometrics.face-service.default_aura default
+    class late_start
+    class hal
+    user system
+    group system
+    interface aidl android.hardware.biometrics.face.IFace/default

@@ -47,8 +47,6 @@ def main():
     elf_modules = {}
     renamed_file = root/'configs/renamed-binaries.json'
     renamed = json.loads(renamed_file.read_text()) if renamed_file.is_file() else {}
-    config_renames = root/'configs/renamed-configs.json'
-    if config_renames.is_file(): renamed.update(json.loads(config_renames.read_text()))
     source = a.dump/'vendor'
     provided_file = root/'configs/source-provided.json'
     provided = set(json.loads(provided_file.read_text())['paths']) if provided_file.is_file() else set()

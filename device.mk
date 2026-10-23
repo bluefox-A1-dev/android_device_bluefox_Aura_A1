@@ -87,7 +87,8 @@ PRODUCT_SHIPPING_API_LEVEL := 36
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/mediatek
 
 # Source-built android.hardware.drm-service.clearkey
 PRODUCT_PACKAGES += \
@@ -109,6 +110,12 @@ PRODUCT_PACKAGES += \
 # Source-built android.hardware.contexthub-service.tinysys
 PRODUCT_PACKAGES += \
     android.hardware.contexthub-service.tinysys
+
+# Source-built android.hardware.wifi-service-lazy
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service-lazy \
+    libwifi-hal-wrapper \
+    aura_wifi_hal_mtk_link
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

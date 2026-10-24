@@ -147,5 +147,11 @@ PRODUCT_PACKAGES += \
     libwifi-hal-wrapper \
     aura_wifi_hal_mtk_link
 
+# Device-owned platform init scripts. Preserve the OEM installation paths.
+PRODUCT_COPY_FILES += $(foreach rc,$(sort \
+    $(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc) \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc), \
+    $(rc):$(TARGET_COPY_OUT_VENDOR)/$(patsubst $(LOCAL_PATH)/rootdir/%,%,$(rc)))
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/bluefox/Aura_A1/Aura_A1-vendor.mk)

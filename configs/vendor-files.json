@@ -5660,6 +5660,102 @@
       "reason": "Provided by the standard AOSP vendor build"
     },
     {
+      "path": "vendor/etc/init/hw/factory_init.connectivity.common.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/factory_init.connectivity.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/factory_init.project.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/factory_init.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.aee.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.cgroup.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.connectivity.common.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.connectivity.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.hct.platform.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.hct.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.modem.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.mt6789.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.mt6789.usb.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.mtkgki.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.project.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init.sensor_2_0.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/init_connectivity.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.connectivity.common.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.connectivity.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.modem.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.project.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/meta_init.vendor.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
+      "path": "vendor/etc/init/hw/multi_init.rc",
+      "reason": "Maintained in device rootdir"
+    },
+    {
       "path": "vendor/etc/init/vndservicemanager.rc",
       "reason": "Provided by the standard AOSP vendor build"
     },
@@ -5850,6 +5946,10 @@
     {
       "path": "vendor/etc/selinux/vndservice_contexts",
       "reason": "SELinux compiled from the target source policy"
+    },
+    {
+      "path": "vendor/etc/ueventd.rc",
+      "reason": "Maintained in device rootdir"
     },
     {
       "path": "vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml",

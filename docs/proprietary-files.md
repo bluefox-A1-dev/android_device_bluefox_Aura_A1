@@ -48,3 +48,22 @@ then rerun extraction from the prepared staging directory. Source-provided
 paths are excluded by `configs/source-provided.json`; private ABI exceptions
 have priority over that list. Extraction fixes SONAME and DT_NEEDED only for
 these exceptions and retains ELF verification.
+
+## Device-owned platform rc files
+
+Following the Q25 ownership split, platform initialization scripts and ueventd
+configuration are maintained in the device tree, while vendor service rc files
+remain in `proprietary/vendor/etc/init/` in the vendor repository.
+
+The device tree preserves vendor-relative paths in `rootdir/etc/init/hw/` and
+`rootdir/etc/ueventd.rc`; `device.mk` installs them into the same vendor locations.
+All 24 platform scripts, including factory/META scripts, retain their original
+names, imports and bytes. The migrated `init.project.rc` already includes the
+removal of unsupported mmstat trace setup. Device-specific rc modules retain
+their existing installation rules.
+
+The inventory generator excludes rc files already present at the corresponding
+`rootdir` path. Edit these device-owned files directly rather than adding them
+back to `proprietary-files.txt` or applying extraction fixups. The 93 vendor
+service rc files remain in the extraction list. Shell scripts and the vendor
+fstab retain their existing ownership.

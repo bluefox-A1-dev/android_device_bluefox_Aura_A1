@@ -57,7 +57,11 @@ def main():
     for item in sorted(source.rglob('*')):
         relative = item.relative_to(source).as_posix()
         destination = 'vendor/'+relative
-        reason = generated_vendor_file(relative)
+        # Device-owned rc files retain their vendor-relative layout in rootdir.
+        # Do not re-extract them or regenerate duplicate vendor copy rules.
+        device_rc = root/'rootdir'/relative
+        reason = ('Maintained in device rootdir' if item.suffix == '.rc' and device_rc.is_file()
+                  else generated_vendor_file(relative))
         if reason and (item.is_file() or item.is_symlink()):
             excluded.append(dict(path=destination, reason=reason))
             continue

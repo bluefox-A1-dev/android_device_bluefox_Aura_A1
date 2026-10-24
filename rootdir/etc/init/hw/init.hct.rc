@@ -1,0 +1,159 @@
+# HCT common .rc configure
+
+# fingerprint
+import ${ro.vendor.rc}init.fingerprint.rc
+# HCT lishuo add swap.rc configure
+import ${ro.vendor.rc}init.hctswap.rc
+on post-fs-data
+# HCT.chris lepton
+    mkdir /mnt/vendor/nvcfg/FLIR
+    chown system system /mnt/vendor/nvcfg/FLIR
+    chmod 0771 /mnt/vendor/nvcfg/FLIR
+    restorecon_recursive /mnt/vendor/nvcfg/FLIR
+
+# HCT.wangqingsong WIFIMAC
+    mkdir /mnt/vendor/nvcfg/WIFIMAC
+    chown system system /mnt/vendor/nvcfg/WIFIMAC
+    chmod 0777 /mnt/vendor/nvcfg/WIFIMAC
+    restorecon_recursive /mnt/vendor/nvcfg/WIFIMAC
+    
+on boot
+# HCT.chris lepton
+    chown system system /dev/lepton_drv
+    chmod 660 /dev/lepton_drv
+    chown system system /dev/i2c-7
+    chmod 660 /dev/i2c-7
+# hct.liuwenbo add for m889 yj fm audio feature
+    chmod 0777 /sys/devices/platform/1100f000.i2c3/i2c-3/3-005a/fm_speaker_switch
+    chmod 0777 /sys/devices/platform/hct_usbhp/fm_antenna_ctrl
+    chmod 0777 /sys/devices/platform/hct_fmant/fm_antenna_ctrl
+
+# hct.wangqingsong HctSatellite
+    chmod 0777 /dev/ttyS1
+    chmod 0777 /dev/ttysWK0
+    
+# hct fangkou add cope aee log
+    chmod 0777 /data/aee_exp(/.*)?
+    chmod 0777 /data/vendor/aee_exp(/.*)?
+# hct fangkou add for v500 eSIm
+    chmod 0666 /sys/devices/platform/hct_sim/sim_ctrl
+
+# hct fangkou add for v500 InfraredLight
+    chmod 0777 /sys/devices/platform/soc/11db1000.i2c/i2c-6/6-0063/led1_onoff
+
+# hct seven add for default InfraredLight
+    chmod 0777 /sys/class/leds/red/brightness
+    chmod 0777 /sys/class/leds/green/brightness
+    chmod 0777 /sys/class/leds/blue/brightness
+# hct seven add for default Lights
+#CampingLight
+    chmod 0777 /sys/devices/platform/1100f000.i2c/i2c-3/3-0063/onoff
+    chmod 0777 /sys/devices/platform/11004000.i2c/i2c-7/7-0063/onoff
+    chmod 0777 /sys/devices/platform/1100f000.i2c/i2c-3/3-0063/level
+    chmod 0777 /sys/devices/platform/11004000.i2c/i2c-7/7-0063/level
+#flash lights
+    chmod 0777 /sys/devices/platform/1100d000.i2c/i2c-6/6-0063/led1_onoff
+
+#Infrared lamp
+    chmod 0777  /sys/devices/platform/1100d000.i2c/i2c-6/6-0063/led2_onoff
+#Breathing light
+    chmod 0777  /sys/devices/platform/1100f000.i2c/i2c-3/3-006a/leds/aw22xxx_led/effect
+    chmod 0777  /sys/devices/platform/1100f000.i2c/i2c-3/3-006a/leds/aw22xxx_led/cfg
+
+# add by zhoujiahua for 66w master current and current slave
+    chmod 0777 /sys/devices/platform/pe5/input_current_master
+    chmod 0777 /sys/devices/platform/pe5/input_current_slave
+
+# add by zhoujiahua for glove
+    chmod 0777 /sys/devices/platform/hct_device/glove_en
+    chown system system /sys/devices/platform/hct_device/glove_en
+
+# add by zhoujiahua for gesture
+    chmod 0777 /sys/devices/platform/hct_device/gesture_en
+    chown system system /sys/devices/platform/hct_device/gesture_en
+
+    chmod 0777 /proc/hct/props/tp.gesture
+    chown system system /proc/hct/props/tp.gesture
+
+    chown root system /sys/devices/platform/charger/hct_chg_control
+    chown root system /sys/devices/platform/charger/hct_chg_fast
+    chown root system /sys/devices/platform/charger/hct_discharging
+    chown root system /sys/devices/platform/charger/bv_chg_control
+    chown root system /sys/devices/platform/charger/bv_chg_fast
+    chmod 0777 /sys/devices/platform/charger/hct_chg_control
+    chmod 0444 /sys/devices/platform/charger/hct_chg_fast
+    chmod 0666 /sys/devices/platform/charger/hct_discharging
+    chmod 0666 /sys/devices/platform/charger/bv_chg_control
+    chmod 0444 /sys/devices/platform/charger/bv_chg_fast
+
+    chown root system /proc/hct/props
+    chmod 0777 /proc/hct/props
+    chown root system /proc/hct/props/tp.gesture
+    chmod 0666 /proc/hct/props/tp.gesture
+
+    chown root system /sys/devices/platform/sp-ctrl/sp_irq
+    chown root system /sys/devices/platform/sp-ctrl/sp_level_en
+    chown root system /sys/devices/platform/sp-ctrl/sp_mcu_3p3
+    chown root system /sys/devices/platform/sp-ctrl/sp_rst
+    chown root system /sys/devices/platform/sp-ctrl/sp_wakeup
+
+    chmod 0444 /sys/devices/platform/sp-ctrl/sp_irq
+    chmod 0666 /sys/devices/platform/sp-ctrl/sp_level_en
+    chmod 0666 /sys/devices/platform/sp-ctrl/sp_mcu_3p3
+    chmod 0666 /sys/devices/platform/sp-ctrl/sp_rst
+    chmod 0666 /sys/devices/platform/sp-ctrl/sp_wakeup
+
+    mkdir /dev/spagent
+    chmod 0777 /dev/spagent
+
+# add by zhoujiahua for token
+    chmod 0777 /sys/devices/platform/husb/mode
+    chown system system /sys/devices/platform/husb/mode
+
+# add by zwm for pogoping
+    chmod 0777 /sys/devices/platform/husb/pogo
+#hct.seven add for BackInfraredLight
+    chmod 0777 /sys/devices/platform/1100d000.i2c6/i2c-6/6-0063/led1_onoff
+    chmod 0777 /sys/devices/platform/1100d000.i2c6/i2c-6/6-0063/led2_onoff
+    chmod 0777 /sys/devices/virtual/flashlight_core/flashlight/flashlight_contrl
+    chmod 0777 /sys/devices/platform/11db1000.i2c/i2c-6/6-0063/led1_onoff
+    chmod 0777 /sys/devices/platform/11ed2000.i2c/i2c-2/2-0063/led1_onoff
+    chmod 0777 /sys/devices/platform/11ed2000.i2c/i2c-2/2-0063/led2_onoff
+
+#hct add for Satellite
+    chmod 0777 /sys/devices/platform/soc/soc:ntn-f100/hct_ntn_power_state
+
+#HCT.Seven add for mtk gpio begin ,2025/9/18 @{
+    chmod 0777 /proc/mtk_gpio/soc.pinctrl
+#HCT.Seven @}
+#HCT.Seven add for typec_polarity  begin ,2025/9/18 @{
+    chmod 0777 /sys/class/tcpc/type_c_port0/typec_polarity
+#HCT.Seven @}
+
+# hct fangkou add for rw mnt/vendor/nvcfg/HCT/
+    mkdir /mnt/vendor/nvcfg/HCT
+    chown system system /mnt/vendor/nvcfg/HCT
+    chmod 0771 /mnt/vendor/nvcfg/HCT
+    restorecon_recursive /mnt/vendor/nvcfg/HCT
+
+    chown system system /mnt/vendor/nvcfg/HCT/battery.json
+    chmod 0777 /mnt/vendor/nvcfg/HCT/battery.json
+
+chmod 0777 /dev/gauge/reset_battery_cycle
+chown root system /dev/gauge/reset_battery_cycle
+
+chmod 0777 /sys/class/power_supply/battery/cycle_count
+chown root system /sys/class/power_supply/battery/cycle_count
+
+chmod 0777 /sys/devices/platform/battery-manager/power_supply/battery/cycle_count
+chown root system /sys/devices/platform/battery-manager/power_supply/battery/cycle_count
+
+#hct seven add for j587 lights
+chmod 0777 sys/devices/platform/soc/1101a000.i2c/i2c-6/6-0063/led1_onoff
+chmod 0777 sys/devices/platform/soc/11015000.i2c/i2c-3/3-0063/led1_onoff
+chmod 0777 sys/devices/platform/soc/11015000.i2c/i2c-3/3-0063/led2_onoff
+chmod 0777 sys/devices/platform/hct_led_pwm/led_ctrl
+chmod 0777 /sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0022/tcpc/type_c_port0/typec_polarity
+
+# add by zhoujiahua for new double click wakeup
+chmod 0777 /proc/hct/props/tp.gesture
